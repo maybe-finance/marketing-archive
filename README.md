@@ -127,4 +127,4 @@ The original marketing site had nearly a dozen contributors! Massive thanks to [
 
 ## Copyright & license
 
-Maybe is distributed under an [AGPLv3 license](https://github.com/maybe-finance/marketing/blob/main/LICENSE). "Maybe" is a trademark of Maybe Finance, Inc.
+The Maybe marketing site is distributed under an [AGPLv3 license](https://github.com/maybe-finance/marketing/blob/main/LICENSE). "Maybe" is a trademark of Maybe Finance, Inc.
