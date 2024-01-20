@@ -1,6 +1,13 @@
-# Maybe Labs
+# Maybe Marketing Site
+This is the repo for the former (and hopefully soon to be "present") marketing site for Maybe, an OSS personal finance and wealth management platform.
 
-The Marketing site for Maybe Finance with mini-tools
+The marketing site was home to a half dozen financial mini-tools and dozens of in-depth articles on personal finance.
+
+Now that Maybe [is getting a new lease on life](https://github.com/maybe-finance/maybe), we're working on getting the marketing site back up as well!
+
+The README details below are likely somewhat dated, but we're working to get everything cleaned up and functioning as quickly as possible.
+
+---
 
 ## Getting Started
 
