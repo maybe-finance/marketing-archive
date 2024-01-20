@@ -1,3 +1,5 @@
+![home](https://github.com/maybe-finance/marketing/assets/35243/e899e0a0-7d77-495e-b8d1-f189d097f87b)
+
 # Maybe Marketing Site
 This is the repo for the former (and hopefully soon to be "present") marketing site for Maybe, an OSS personal finance and wealth management platform.
 
