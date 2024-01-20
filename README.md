@@ -120,3 +120,11 @@ To manually sync the episodes, execute the following command:
 ```
 TRANSISTOR_API_KEY=transistor-api-key rake podcast:sync
 ```
+---
+## Credits
+
+The original marketing site had nearly a dozen contributors! Massive thanks to [@pieterbeulque](https://github.com/pieterbeulque), [@zachgoll](https://github.com/zachgoll), [@TWilson023](https://github.com/TWilson023), [@benface](https://github.com/benface), [@sauloantuness](https://github.com/sauloantuness), [@ffiller](https://github.com/ffiller), [@Tobolka](https://github.com/Tobolka), [@jaobrown](https://github.com/jaobrown), [@justinfar](https://github.com/justinfar), [@marcqualie](https://github.com/marcqualie) and [@narciero](https://github.com/narciero)!
+
+## Copyright & license
+
+The Maybe marketing site is distributed under an [AGPLv3 license](https://github.com/maybe-finance/marketing/blob/main/LICENSE). "Maybe" is a trademark of Maybe Finance, Inc.
