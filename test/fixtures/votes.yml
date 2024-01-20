@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tool: one
+  ip_address: 127.0.0.1
+
+two:
+  tool: two
+  ip_address: 127.0.0.2

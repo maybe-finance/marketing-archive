@@ -1,0 +1,131 @@
+#arrow {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  overflow: visible;
+}
+
+#group-1,
+#group-2,
+#group-3,
+#group-4,
+#group-5,
+#group-6,
+#group-7 {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  overflow: visible;
+  opacity: 0;
+}
+
+.explode #group-1,
+.explode #group-2,
+.explode #group-3,
+.explode #group-4,
+.explode #group-5,
+.explode #group-6,
+.explode #group-7 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+
+.explode #particle-1-1 {
+  transform: scale(0) translate(0, -30px);
+  transition: 0.5s transform 0.3s;
+}
+
+.explode #particle-1-2 {
+  transform: scale(0) translate(10px, -50px);
+  transition: 1.5s transform 0.3s;
+}
+
+.explode #particle-2-1 {
+  transform: scale(0) translate(30px, -15px);
+  transition: 0.5s transform 0.3s;
+}
+
+.explode #particle-2-2 {
+  transform: scale(0) translate(60px, -15px);
+  transition: 1.5s transform 0.3s;
+}
+
+.explode #particle-3-1 {
+  transform: scale(0) translate(30px, 0px);
+  transition: 0.5s transform 0.3s;
+}
+
+.explode #particle-3-2 {
+  transform: scale(0) translate(60px, 10px);
+  transition: 1.5s transform 0.3s;
+}
+
+.explode #particle-4-1 {
+  transform: scale(0) translate(30px, 15px);
+  transition: 0.5s transform 0.3s;
+}
+
+.explode #particle-4-2 {
+  transform: scale(0) translate(40px, 50px);
+  transition: 1.5s transform 0.3s;
+}
+
+.explode #particle-5-1 {
+  transform: scale(0) translate(-10px, 20px);
+  transition: 0.5s transform 0.3s;
+}
+
+.explode #particle-5-2 {
+  transform: scale(0) translate(-60px, 30px);
+  transition: 1.5s transform 0.3s;
+}
+
+.explode #particle-6-1 {
+  transform: scale(0) translate(-30px, 0px);
+  transition: 0.5s transform 0.3s;
+}
+
+.explode #particle-6-2 {
+  transform: scale(0) translate(-60px, -5px);
+  transition: 1.5s transform 0.3s;
+}
+
+.explode #particle-7-1 {
+  transform: scale(0) translate(-30px, -15px);
+  transition: 0.5s transform 0.3s;
+}
+
+.explode #particle-7-2 {
+  transform: scale(0) translate(-55px, -30px);
+  transition: 1.5s transform 0.3s;
+}
+
+.explode #arrow {
+  animation: animateArrow 0.4s ease-out forwards;
+
+}
+
+@keyframes animateArrow {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(.2);
+  }
+  60% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+    fill: #52edff;
+  }
+}
+
+@keyframes animateArrowOut {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

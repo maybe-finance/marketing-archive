@@ -1,0 +1,17 @@
+<div class="flex flex-col justify-start items-start text-white bg-gray-900 rounded-2xl p-4 xs:p-6 md:p-10 text-left transform-gpu transition-transform hover:scale-105">
+  <i class="w-20 h-20 flex items-center justify-center rounded-3xl mb-6 bg-blue text-blue bg-opacity-10 text-5xl ri-bookmark-line"></i>
+  <h3 class="mb-6 text-xl font-extrabold md:mb-8 font-display md:text-2xl">
+    More terms
+  </h3>
+  <div class="flex flex-col w-full gap-2">
+    <% @more_terms.each do |term| %>
+      <a
+        href=<%= "/dictionary/#{term[:slug]}" %>
+        class="flex items-center justify-between w-full px-5 py-4 mt-auto font-medium bg-black rounded-md hover:bg-opacity-50 transform-gpu transition-transform hover:scale-105"
+      >
+        <%= term[:term] %>
+        <i class="transition-all transform opacity-50 ri-arrow-right-line ri-lg hover:opacity-100 hover:translate-x-1"></i>
+      </a>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="relative overflow-hidden">
+  <div class="absolute left-0 right-0 z-0 top-1/4 text-blue js-background-swoop">
+    <svg width="1429" height="400" viewBox="0 0 1429 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-306 389C-212.482 329.784 46.5801 211.351 334.68 211.351C694.804 211.351 658.127 342.389 971.099 342.389C1221.48 342.389 1355.52 118.13 1418 6" stroke-width="24"/>
+    </svg>
+  </div>
+
+  <div class="relative z-10 px-4 py-16 mx-auto max-w-7xl sm:px-8">
+    <div class="max-w-3xl mx-auto mb-12 text-center">
+      <h1 class="mb-4 text-2xl font-extrabold font-display sm:text-4xl">
+        We got you!
+      </h1>
+
+      <p class="text-lg opacity-80">
+        Update your info below to help us understand how to serve you better.
+      </p>
+    </div>
+
+    <div class="max-w-2xl mx-auto mb-12">
+      <div class="p-6 text-center bg-gray-900 rounded-2xl">
+        <strong class="block mb-1 font-sans text-xl font-semibold sm:text-3xl">
+          You are <span class="font-semibold text-yellow">#<%= @user.queue_position %></span> in line to get access!
+        </strong>
+        <p class="sm:text-lg">
+          Share your referral link to get access even earlier: <code class="font-mono text-sm sm:text-normal text-blue inline-block rounded px-2 py-0.5 bg-blue bg-opacity-20">maybe.co/refer/<%= @user.hashid %></code>
+        </p>
+      </div>
+    </div>
+
+    <%= render "early_access_users/form/edit-form" %>
+  </div>
+</div>

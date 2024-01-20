@@ -1,0 +1,13 @@
+<%- 
+  title "Compound Interest Calculator"
+  description "See how your investments grow over time by earning interest on interest and letting your money work for you."
+  meta_image "og-compound-interest-calculator.png"
+  legacy
+-%>
+
+<div id="compound-interest-calculator-app" class="relative overflow-hidden"></div>
+
+<%= javascript_pack_tag 'compound-interest-calculator' %>
+<%= stylesheet_pack_tag 'compound-interest-calculator', media: 'all' %>
+
+<%= render "partials/get-started" %>

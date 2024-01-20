@@ -1,0 +1,18 @@
+<%- 
+  title "Financial Dictionary"
+  description "Here you'll find the A-Z of every finance, crypto or money related term you can possibly think of."
+  legacy
+-%>
+
+<div id="dictionary-app" class="relative" data-terms="<%= @terms.to_json %>"></div>
+
+<%= javascript_pack_tag 'dictionary' %>
+<%= stylesheet_pack_tag 'dictionary', media: 'all' %>
+
+<%= render "partials/get-started" %>
+
+<style type="text/css">
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

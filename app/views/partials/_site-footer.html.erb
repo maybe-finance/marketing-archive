@@ -1,0 +1,186 @@
+<footer class="px-4 py-4 mx-auto mt-24 mb-20 max-w-7xl">
+  <div class="flex flex-wrap justify-between gap-10 text-base md:flex-nowrap md:space-y-0 gap-x-4">
+    <div class="text-xs text-white text-opacity-50 shrink-0">
+      <div class="space-y-4 md:flex md:flex-col md:justify-start md:h-full md:space-y-0">
+        <div class="mb-4 space-y-4">
+          <%= link_to root_path, class: 'block flex-none' do %>
+          <%= image_tag "logo-white-dark.svg", class: 'w-40  ', alt: 'Maybe Logo' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-between flex-grow max-w-2xl gap-6 text-base md:flex-nowrap">
+      <div>
+        <h6 class="mb-4 text-white">
+          Company
+        </h6>
+
+        <ul class="space-y-2">
+          <li>
+            <%= link_to "Security", security_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Jobs", "https://jobs.maybe.co", class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Articles", articles_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Dictionary", dictionary_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Podcast", podcast_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Newsletter", now_subscribe_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Privacy", privacy_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Terms", terms_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="mb-4 text-white">
+          Product
+        </h6>
+
+        <ul class="space-y-2">
+          <li>
+            <a href="/#track" class="transition-opacity opacity-70 hover:opacity-100">
+              Track
+            </a>
+          </li>
+          <li>
+            <a href="/#ask-my-advisor" class="transition-opacity opacity-70 hover:opacity-100">
+              Ask My Advisor
+            </a>
+          </li>
+          <li>
+            <a href="/#forecast" class="transition-opacity opacity-70 hover:opacity-100">
+              Forecast
+            </a>
+          </li>
+          <li>
+            <a href="/pricing" class="transition-opacity opacity-70 hover:opacity-100">
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a href="/security" class="transition-opacity opacity-70 hover:opacity-100">
+              Security
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="mb-4 text-white">
+          Built in public
+        </h6>
+
+        <ul class="space-y-2">
+          <li>
+            <a href="https://twitter.com/maybe" class="transition-opacity opacity-70 hover:opacity-100">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/maybefinance" class="transition-opacity opacity-70 hover:opacity-100">
+              Discord
+            </a>
+          </li>
+          <li>
+            <a href="https://www.producthunt.com/products/maybe-co"
+              class="transition-opacity opacity-70 hover:opacity-100">
+              Product Hunt
+            </a>
+          </li>
+          <li>
+            <%= link_to "Roadmap", roadmap_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Community", community_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+          <li>
+            <%= link_to "Investors", investors_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="mb-4 text-white">
+          Tools
+        </h6>
+
+        <ul class="space-y-2">
+          <li>
+            <a href="/tools/low-hanging-fruit-checklist" class="transition-opacity opacity-70 hover:opacity-100">
+              Low Hanging Fruit Checklist
+            </a>
+          </li>
+          <li>
+            <a href="/tools/freedom-calculator" class="transition-opacity opacity-70 hover:opacity-100">
+              Financial Freedom Calculator
+            </a>
+          </li>
+          <li>
+            <a href="/tools/bogleheads-growth-calculator" class="transition-opacity opacity-70 hover:opacity-100">
+              Bogleheads Growth Calculator
+            </a>
+          </li>
+          <li>
+            <a href="/tools/fomo-calculator" class="transition-opacity opacity-70 hover:opacity-100">
+              FOMO Calculator
+            </a>
+          </li>
+          <li>
+            <a href="/tools/crypto-index-fund" class="transition-opacity opacity-70 hover:opacity-100">
+              Crypto Index Fund
+            </a>
+          </li>
+          <li>
+            <a href="/tools/compound-interest-calculator" class="transition-opacity opacity-70 hover:opacity-100">
+              Compound Interest Calculator
+            </a>
+          </li>
+          <li>
+            <a href="/tools/vote" class="transition-opacity opacity-70 hover:opacity-100">
+              Vote for the next tool!
+            </a>
+          </li>
+          <li>
+            <a href="/tools/vote#idea" class="transition-opacity opacity-70 hover:opacity-100">
+              Got an idea for a tool?
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mt-12 border-gray-600 mb-7" />
+
+  <div class="flex flex-wrap gap-4 md:flex-nowrap">
+    <div class="space-y-2 text-sm text-gray-100">
+      <p>&copy; 2023 Maybe Finance, Inc. &bull; <a href="mailto:support@maybe.co" class="underline">support@maybe.co</a></p>
+      <p>Advisory services offered through Maybe Finance, Inc., a Registered Investment Advisor.
+<br>Investing involves risk; you may lose money. Past performance is no guarantee of future results.</p>
+    </div>
+    <div class="flex justify-start flex-grow flex-shrink-0 space-x-4 md:justify-end">
+      <a href="https://discord.gg/maybefinance" target="_blank">
+        <i class="text-3xl ri-discord-fill hover:text-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/company/maybe" target="_blank">
+        <i class="text-3xl ri-linkedin-box-fill hover:text-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/maybe" target="_blank">
+        <i class="text-3xl ri-twitter-fill hover:text-twitter"></i>
+      </a>
+    </div>
+  </div>
+</footer>

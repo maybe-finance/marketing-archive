@@ -1,0 +1,120 @@
+<%- 
+  title "Security" 
+  description "When it comes to financial technology, security can't be an afterthought. It has to be a core tenet built into the product and the company right from the start."
+-%>
+
+<div class="relative overflow-hidden">
+  <div class="relative bg-local bg-center bg-no-repeat bg-cover" style="
+      background-image: url(<%= asset_path("security-page/cryptography.svg") %>)
+  ">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, #16161a, #16161aee, #16161a)">
+    </div>
+    <div class="relative flex flex-col items-center max-w-7xl mx-auto px-8 text-center">
+      <div class="mt-16 flex items-center justify-center w-18 h-18 rounded-3xl" style="
+        background:
+          radial-gradient(69% 69% at 50% 9%, rgba(255, 255, 255, 0.25) 0%, transparent 100%),
+          linear-gradient(139deg, rgba(255, 255, 255, 0.06) 18%, rgba(255, 255, 255, 0.015) 77%);
+        box-shadow: 0px 0px 4.5px rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(4.5px);
+      ">
+        <i class="ri-lock-2-line text-4xl text-white"></i>
+      </div>
+
+      <h1 class="mt-8 font-display text-3xl sm:text-4xl md:text-5xl font-semibold">
+        <span class="gradient-heading">Secure.</span>
+        <span class="gradient-heading">Safe.</span>
+        <span class="gradient-heading">Private.</span>
+      </h1>
+
+      <p class="mt-1 text-lg sm:max-w-2xl text-gray-50">
+        When it comes to financial technology, security can't be an afterthought. It has to be a core tenet built into
+        the
+        product and the company right from the start.
+      </p>
+    </div>
+  </div>
+
+  <section class="mt-16 relative z-0 overflow-hidden">
+    <div class="px-4 mx-auto max-w-7xl">
+      <!-- 3 column -->
+      <div class="hidden space-x-4 lg:flex">
+        <div style="flex: 30" class="flex flex-col flex-1 space-y-4">
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_1", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_2", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_3", layout: "partials/security/base" %>
+          </div>
+        </div>
+        <div style="flex: 40" class="flex flex-col flex-1 space-y-4">
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_4", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_5", layout: "partials/security/base" %>
+          </div>
+        </div>
+        <div style="flex: 30" class="flex flex-col flex-1 space-y-4">
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_6", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_7", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_8", layout: "partials/security/base" %>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 column -->
+      <div class="hidden space-x-4 sm:flex lg:hidden">
+        <div style="flex: 30" class="flex flex-col flex-1 space-y-4">
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_1", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_2", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_3", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_4", layout: "partials/security/base" %>
+          </div>
+        </div>
+        <div style="flex: 30" class="flex flex-col flex-1 space-y-4">
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_6", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_7", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_8", layout: "partials/security/base" %>
+          </div>
+          <div class="flex-grow">
+            <%= render partial: "partials/security/card_5", layout: "partials/security/base" %>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 column -->
+      <div class="space-y-4 sm:hidden">
+        <%= render partial: "partials/security/card_1", layout: "partials/security/base" %>
+        <%= render partial: "partials/security/card_2", layout: "partials/security/base" %>
+        <%= render partial: "partials/security/card_3", layout: "partials/security/base" %>
+        <%= render partial: "partials/security/card_4", layout: "partials/security/base" %>
+        <%= render partial: "partials/security/card_5", layout: "partials/security/base" %>
+        <%= render partial: "partials/security/card_6", layout: "partials/security/base" %>
+        <%= render partial: "partials/security/card_7", layout: "partials/security/base" %>
+        <%= render partial: "partials/security/card_8", layout: "partials/security/base" %>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%= render "partials/get-started" %>

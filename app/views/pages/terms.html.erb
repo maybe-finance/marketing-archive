@@ -1,0 +1,24 @@
+<%- 
+  title @page.fields.title 
+  description "We want you to have a pleasant experience navigating and using our website, so please read these Terms of Service and make sure you understand them."
+  legacy
+-%>
+<div class="relative overflow-hidden">
+  <div class="absolute top-0 left-0 z-0 text-blue js-background-swoop">
+    <svg width="632" height="381" viewBox="0 0 632 381" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-623 371C-555.573 314.412 -368.791 201.237 -161.071 201.237C98.5774 201.237 72.1331 326.458 297.785 326.458C478.307 326.458 574.955 112.153 620 5" stroke-width="24"/>
+    </svg>
+  </div>
+  <div class="relative z-10 max-w-2xl px-4 py-16 mx-auto sm:px-8">
+    <header class="mb-12 text-center">
+        <h1 class="mb-4 text-2xl font-extrabold font-display sm:text-4xl lg:text-5xl">
+          <%= @page.fields.title %>
+        </h1>
+        <small class="text-sm opacity-50 sm:text-normal">Last updated <%= @page.updated.to_datetime.strftime('%B %-d, %Y') %></small>
+    </header>
+
+    <article class="text-content">
+      <%= @page.fields.body.html_safe %>
+    </article>
+  </div>
+</div>

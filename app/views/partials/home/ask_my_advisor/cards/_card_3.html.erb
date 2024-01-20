@@ -1,0 +1,16 @@
+<% content_for :feature_card__title do %>
+Not just text
+<% end %>
+
+<% content_for :feature_card__description do %>
+Video and audio replies too
+<% end %>
+
+<% content_for :feature_card__color do %>#4361EE<% end %>
+<% content_for :feature_card__border_color do %>#4361EE<% end %>
+
+<% content_for :feature_card__content do %>
+<div class="w-full -mb-18 flex justify-end">
+    <%= image_tag asset_path("home/chat-media.png"), class: 'w-64 max-w-full lg:w-full', alt: '' %>
+</div>
+<% end %>

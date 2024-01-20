@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: one@email.com
+  category: bug
+  description: big bug
+
+two:
+  email: two@email.com
+  category: improvement
+  description: nice feature

@@ -1,0 +1,246 @@
+<%- 
+  title "Community" 
+  meta_image "meta-community.png"
+  description "Join the Maybe community to connect with other Maybe members from around the world and go on the journey together towards achieving your financial goals."
+  legacy
+-%>
+<%
+  reasons = [
+    {
+      :icon => "ri-hearts-line ri-xl bg-red text-red",
+      :label => "Build meaningful relationships",
+    },
+    {
+      :icon => "ri-book-line ri-xl bg-gray-100text-gray-100",
+      :label => "Expand your financial literacy",
+    },
+    {
+      :icon => "ri-time-line ri-xl bg-teal text-teal",
+      :label => "Get early-access features",
+    },
+    {
+      :icon => "ri-notification-line ri-xl bg-blue text-blue",
+      :label => "Get announcements first",
+    },
+    {
+      :icon => "ri-trophy-line ri-xl bg-yellow text-yellow",
+      :label => "Share your Maybe wins",
+    },
+    {
+      :icon => "ri-user-smile-line ri-xl bg-purple text-purple",
+      :label => "Have fun dreaming of your future",
+    },
+  ]
+  cards = [
+    {
+      :icon => "ri-twitter-fill bg-twitter text-white text-5xl",
+      :header => "Follow on Twitter",
+      :href => "https://twitter.com/maybe",
+      :cta => "Follow @maybe",
+    },
+    {
+      :icon => "bg-teal bg-opacity-10",
+      :header => "Ask Maybe",
+      :href => "https://maybe.co/ask",
+      :cta => "Submit a Question",
+      :logo => "/img/ask-advisor.svg"
+    },
+    {
+      :icon => "ri-mail-line bg-yellow text-yellow bg-opacity-10 text-4xl",
+      :header => "Get our newsletter",
+      :href => "/now-subscribe/",
+      :cta => "Subscribe to Maybe Now",
+    },
+    {
+      :icon => "ri-question-line bg-blue text-blue bg-opacity-10 text-4xl",
+      :header => "Get help",
+      :href => "mailto:hello@maybe.co",
+      :cta => "Contact us",
+    },
+    {
+      :icon => "ri-file-copy-2-line bg-red text-red bg-opacity-10 text-4xl",
+      :header => "Contribute a resource",
+      :href => "https://airtable.com/shrZHObfUvFNZI158",
+      :cta => "Contribute",
+    },
+  ]
+  membersLeft = [
+    {
+      :img => "community-page/kyra-barker.jpg",
+      :name=>"Kyra Barker",
+      :position=>"top-8 xl:top-4 left-1/4",
+      :style => "w-16 xl:w-24 animate-fade-in"
+    },
+    {
+      :img => "community-page/david-craige.jpg",
+      :name=>"David Craige",
+      :position=>"top-14 left-3/4",
+      :style => "w-16 animate-fade-in-4"
+    },
+    {
+      :img => "community-page/adrienne-barnes.jpg",
+      :name=>"Adrienne Barnes",
+      :position=>"top-44 left-8",
+      :style => "w-12 xl:w-14 animate-fade-in"
+    },
+    {
+      :img => "community-page/aaron-francis.jpg",
+      :name=>"Aaron Francis",
+      :position=>"top-36 left-full",
+      :style => "w-14 animate-fade-in-3"
+    },
+    {
+      :img => "community-page/john-hammond.jpg",
+      :name=>"John Hammond",
+      :position=>"top-36 left-1/2",
+      :style => "w-14 xl:w-24 animate-fade-in-2"
+    },
+     {
+      :img => "community-page/sandeep-hegde.jpg",
+      :name=>"Sandeep Hegde",
+      :position=>"top-60 left-3/4",
+      :style => "w-16 animate-fade-in-3"
+     }
+  ]
+  membersRight = [
+    {
+      :img => "community-page/robert-sfichi.jpg",
+      :name=>"Robert Sfichi",
+      :position=>"top-8 xl:top-4 right-1/4",
+      :style => "w-16 xl:w-24 animate-fade-in"
+    },
+    {
+      :img => "community-page/sheikh-shourav.jpg",
+      :name=>"Sheikh Shourav",
+      :position=>"top-14 right-3/4",
+      :style => "w-16 animate-fade-in-4"
+    },
+    {
+      :img => "community-page/david-leshaw.jpg",
+      :name=>"David Leshaw",
+      :position=>"top-44 right-8",
+      :style => "w-12 xl:w-14 animate-fade-in"
+    },
+    {
+      :img => "community-page/ross-hudgens.jpg",
+      :name=>"Ross Hudgens",
+      :position=>"top-36 right-full",
+      :style => "w-14 animate-fade-in-3"
+    },
+    {
+      :img => "community-page/stephen-olmon.jpg",
+      :name=>"Stephen Olmon",
+      :position=>"top-36 right-1/2",
+      :style => "w-14 xl:w-24 animate-fade-in-2"
+    },
+      {
+      :img => "community-page/rudy-ferraz.jpg",
+      :name=>"Rudy Ferraz",
+      :position=>"top-60 right-3/4",
+      :style => "w-16 animate-fade-in-3"
+    }
+  ]
+%>
+<div class="relative mt-8 overflow-hidden text-center">
+  <header class="flex flex-row mx-auto mb-4 bg-local bg-center bg-no-repeat bg-contain max-w-7xl sm:mb-16"
+    style="background-image: url(/img/world.svg)">
+    <div class="absolute left-0 z-0 opacity-50 top-10 text-purple js-background-swoop">
+      <svg width="847" height="276" viewBox="0 0 847 276" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M-191.784 262.967C-138.036 231.282 -79.8104 69.9696 144.349 78.3602C368.509 86.7509 380.315 202.19 566.511 189.595C715.468 179.519 788.063 68.3843 821.656 13"
+          stroke="url(#paint0_linear)" stroke-width="24" stroke-linecap="round" />
+      </svg>
+    </div>
+    <div class="relative z-10 flex-1 hidden lg:block opacity-90 ">
+      <% membersLeft.each do |members| %>
+      <div class="group absolute flex flex-row items-center <%= members[:position] %>">
+        <img src="<%= asset_path(members[:img]) %>" alt="<%= members[:name] %>"
+          class="shadow-md border-transparent transition duration-200 group-hover:border-purple border-4 rounded-full <%= members[:style] %>"
+          loading="lazy">
+        <span
+          class="absolute z-50 hidden px-2 py-2 bg-gray-900 rounded-lg shadow-lg left-full group-hover:flex whitespace-nowrap"><%= members[:name] %></span>
+      </div>
+      <% end %>
+    </div>
+    <div class="z-20 pt-10 pb-16 mx-auto sm:pt-20 sm:pb-36">
+      <h1 class="max-w-sm mb-4 text-2xl font-extrabold font-display sm:text-4xl lg:text-5xl sm:max-w-2xl">
+        Join our global community
+      </h1>
+      <p class="max-w-sm px-4 mx-auto sm:max-w-xl sm:px-8">Connect with other Maybe members who are also taking control
+        of their financial life and dreaming of what the future could be.</p>
+    </div>
+    <div class="relative z-10 flex-1 hidden lg:block opacity-90">
+      <% membersRight.each do |members| %>
+      <div class="group absolute flex flex-row items-center <%= members[:position] %>">
+        <img src="<%= asset_path(members[:img]) %>" alt="<%= members[:name] %>"
+          class="shadow-md border-transparent transition duration-200 group-hover:border-purple border-4 rounded-full <%= members[:style] %>"
+          loading="lazy">
+        <span
+          class="absolute z-50 hidden px-2 py-2 bg-gray-900 rounded-lg shadow-lg right-full group-hover:flex whitespace-nowrap"><%= members[:name] %></span>
+      </div>
+      <% end %>
+    </div>
+  </header>
+  <section class="mb-12 sm:mb-24">
+    <h2 class="px-4 mb-6 text-xl font-extrabold font-display sm:text-3xl sm:px-8">
+      Become a community member
+    </h2>
+    <div class="grid max-w-sm grid-cols-2 px-4 mx-auto text-left sm:max-w-3xl xs:gap-6 sm:px-8">
+      <% reasons.each do |reason| %>
+      <div class="flex flex-col items-center gap-3 mb-8 text-center sm:space-x-4 sm:flex-row sm:gap-0 sm:mb-0">
+        <i class="w-10 h-10 flex items-center justify-center bg-opacity-10 rounded-lg <%= reason[:icon] %>"></i>
+        <span><%= reason[:label] %></span>
+      </div>
+      <% end %>
+    </div>
+  </section>
+  <section class="relative z-0 pb-20 overflow-hidden" id="get-involved">
+    <div class="absolute top-0 right-0 z-0 overflow-hidden text-teal js-background-swoop" data-direction="rtl">
+      <svg width="1077" height="323" viewBox="0 0 1077 323" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.3"
+          d="M9 307.5C76.4266 235.915 207 90 440 90C673 90 762 238 929.785 251.153C1097.57 264.307 1303 121.5 1413 9"
+          stroke="url(#paint0_linear)" stroke-width="24" />
+      </svg>
+    </div>
+    <div class="absolute left-0 z-0 overflow-hidden bottom-12 text-red js-background-swoop">
+      <svg class="-ml-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1048"
+        height="241.82" viewBox="0 0 1048 241.82">
+        <path d="M.4,66.48c322.73,0,343,167.32,623.5,167.32C848.28,233.8,968.41,88.59,1024.4,16"
+          transform="translate(11.6 -3.98)" fill="none" stroke-linecap="round" stroke-width="24" />
+      </svg>
+    </div>
+    <h2 class="relative z-20 mb-4 text-xl font-extrabold font-display sm:text-3xl">
+      Get involved
+    </h2>
+    <p class="relative z-20 max-w-xl px-4 mx-auto mb-14 sm:px-8">We are an inclusive community of dreamers, of new and
+      advanced financial nerds that dare to discover their Maybe. Whether you're shy or outgoing, a financial savant or
+      new to managing your money, we have a platform for you to interact with like-minded individuals.</p>
+    <div class="grid grid-cols-1 gap-4 px-4 mx-auto sm:grid-cols-2 lg:grid-cols-3 xs:gap-6 max-w-7xl sm:px-8">
+      <% cards.each do |card| %>
+      <a href="<%= card[:href] || "#get-involved" %>"
+        class="flex flex-col justify-start items-start text-white bg-gray-900 rounded-2xl p-4 xs:p-6 md:p-10 group transform-gpu transition-transform text-left <%= "hover:scale-105" if card[:href] %>">
+        <i class="w-20 h-20 flex items-center justify-center rounded-3xl mb-6 <%= card[:icon] %>">
+          <% if card[:logo] %>
+          <img src="<%= card[:logo] %>" alt="<%= card[:header] %>" class="w-10 h-10">
+          <% end %>
+        </i>
+        <h3 class="mb-6 text-xl font-extrabold md:mb-8 font-display md:text-2xl"><%= card[:header] %></h3>
+        <% if card[:href] %>
+        <div
+          class="flex items-center justify-between w-full px-5 py-4 mt-auto font-medium transition-colors bg-black rounded-md group-hover:bg-opacity-50">
+          <%= card[:cta] %>
+          <i
+            class="transition-all transform opacity-50 ri-arrow-right-line ri-lg group-hover:opacity-100 group-hover:translate-x-1"></i>
+        </div>
+        <% else %>
+        <div class="flex items-center justify-between w-full py-4 mt-auto font-medium transition-colors text-gray-100">
+          <%= card[:cta] %>
+        </div>
+        <% end %>
+      </a>
+      <% end %>
+    </div>
+  </section>
+</div>
+<%= render "partials/get-started" %>
+</div>

@@ -1,0 +1,53 @@
+<% content_for :feature_card__title do %>
+Link accounts automagically
+<% end %>
+
+<% content_for :feature_card__description do %>
+10,000+ institutions to choose from when linking your accounts
+<% end %>
+
+<% content_for :feature_card__color do %>#11E4FF<% end %>
+<% content_for :feature_card__border_color do %>#52EDFF<% end %>
+
+<% content_for :feature_card__content do %>
+<div class="inline-grid grid-cols-5 gap-3 mx-auto p-10">
+  <%
+      icons = [
+        'vanguard',
+        'empty1',
+        'empty2',
+        'chase',
+        'empty2',
+        'empty2',
+        'empty2',
+        'robinhood',
+        'empty1',
+        'betterment',
+        'empty1',
+        'wealthfront',
+        'empty1',
+        'empty2',
+        'empty1',
+        'empty2',
+        'empty2',
+        'coinbase',
+        'empty2',
+        'bofa'
+      ]
+    %>
+
+  <% icons.each do |icon| %>
+  <% empty = icon == "empty1" || icon == "empty2" %>
+  <% style = empty ? icon == "empty1" ? "" : "background-color: #fff1;" : "" %>
+  <div class="relative flex items-center justify-center w-12 h-12 rounded-xl overflow-hidden" style="
+          border: 1px solid #fff1;
+          <%= style %>
+        ">
+    <% if !empty %>
+    <img src="/img/home/institutions/<%= icon %>.svg" alt="" />
+    <div class="absolute inset-0" style="background-image: radial-gradient(80% 80% at 40% 0%, #fff8, #fff1)"></div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+<% end %>

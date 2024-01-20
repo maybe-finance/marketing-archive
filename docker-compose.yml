@@ -1,0 +1,12 @@
+---
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: maybe_labs
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: maybe_labs_development

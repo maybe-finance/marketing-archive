@@ -1,0 +1,56 @@
+<%- 
+  title @article.title
+  description "#{markdown(@article.body).gsub(%r{</?[^>]+?>}, '')[0...300]}..."
+  legacy
+-%>
+<div class="relative overflow-hidden">
+  <div class="absolute left-0 right-0 z-0 top-1/4 text-blue js-background-swoop">
+    <svg width="1429" height="400" viewBox="0 0 1429 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M-306 389C-212.482 329.784 46.5801 211.351 334.68 211.351C694.804 211.351 658.127 342.389 971.099 342.389C1221.48 342.389 1355.52 118.13 1418 6"
+        stroke-width="24" />
+    </svg>
+  </div>
+
+  <div class="relative z-10 max-w-4xl px-4 py-16 mx-auto h-entry sm:px-8">
+    <div class="mb-12">
+      <h1 class="mb-4 text-2xl font-extrabold p-name font-display sm:text-4xl">
+        <%= @article.title %>
+      </h1>
+
+      <p class="text-gray-100">
+        <time class="dt-published" datetime="<%= @article.published.to_datetime.iso8601 %>">
+          <%= @article.published.to_datetime.strftime('%B %e, %Y') %>
+        </time> by <a href="https://twitter.com/<%= @article.author.twitter_handle %>" rel="noopener"
+          class="p-author"><%= @article.author.first_name %> <%= @article.author.last_name %></a>
+      </p>
+    </div>
+    <div class="e-content text-content">
+      <%= @article.body.html_safe %>
+    </div>
+  </div>
+
+  <div class="p-4 mx-auto max-w-7xl sm:px-8">
+    <footer
+      class="items-center max-w-xl p-6 mx-auto space-y-4 bg-gray-900 md:max-w-2xl md:p-10 rounded-2xl sm:flex sm:space-y-0 sm:space-x-6">
+      <%= image_tag @article.author.profile_image, class: 'w-16 h-16 sm:w-24 sm:h-24 block rounded-xl', alt: "#{@article.author.first_name} #{@article.author.last_name} avatar" %>
+
+      <div class="space-y-4 text-sm sm:text-base">
+        <p>
+          <strong><%= @article.author.first_name %> <%= @article.author.last_name %> wrote this.</strong> Got something
+          to add? Continue the conversation on Twitter!
+        </p>
+
+        <a href="https://twitter.com/intent/tweet?screen_name=<%= @article.author.twitter_handle %>&ref_src=twsrc%5Etfw"
+          class="twitter-mention-button" data-show-count="true" data-size="large"
+          data-url="<%= article_url(@article.slug) %>" data-related="<%= @article.author.twitter_handle %>">
+          Tweet to @<%= @article.author.twitter_handle %>
+        </a>
+
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </footer>
+  </div>
+
+  <%= render "partials/get-started" %>
+</div>

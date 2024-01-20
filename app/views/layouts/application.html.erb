@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? ("#{yield(:title)} - Maybe").html_safe : "Maybe - Modern financial planning & investment management" %></title>
+    <meta name="title" content="Maybe">
+    <meta name="description" content="<%= content_for?(:description) ? (yield(:description).gsub(/\n\n/, " ")) : "Maybe is modern financial planning, investment management and retirement planning." %>">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maybe.co">
+    <meta property="og:title" content="<%= content_for?(:title) ? ("#{yield(:title)} - Maybe") : "Maybe - Modern financial planning & investment management" %>">
+    <meta property="og:description" content="<%= content_for?(:description) ? (yield(:description).gsub(/\n\n/, " ")) : "Maybe is modern financial planning, investment management and retirement planning." %>">
+    <meta property="og:image" content="<%= image_url(content_for?(:meta_image) ? yield(:meta_image) : "meta.jpg") %>">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+
+    <meta property="twitter:url" content="https://maybe.co">
+    <meta property="twitter:title" content="<%= content_for?(:title) ? ("#{yield(:title)} - Maybe") : "Maybe - Modern financial planning & investment management" %>">
+    <meta property="twitter:description" content="<%= content_for?(:description) ? (yield(:description).gsub(/\n\n/, " ")) : "Maybe is modern financial planning, investment management and retirement planning." %>">
+    <meta property="twitter:image" content="<%= image_url(content_for?(:meta_image) ? yield(:meta_image) : "meta.jpg") %>">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= canonical_tag -%>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/17e7126cc8.js" crossorigin="anonymous" async></script>
+    <%= preload_pack_asset 'media/inter/Inter-Variable.woff2', media: 'all' %>
+    <%= preload_pack_asset 'media/monument/MonumentExtended-Black.woff2', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1d1b23">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#1d1b23">
+    <meta name="theme-color" content="#1d1b23">
+    <meta name="ENV_API_URL" content="<%= ENV.fetch('API_URL') { 'http://localhost:3000/api' } %>" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR92N47NMZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JR92N47NMZ');
+      gtag('config', 'UA-231549931-1');
+    </script>
+  </head>
+  <body class="font-sans antialiased font-normal leading-normal text-white bg-black user-select-pink">
+    <%= render 'partials/legacy-page-banner' if content_for?(:legacy) %>
+    <%= render 'partials/site-header' %>
+    <%= yield %>
+    <% #TODO: Bring Low Hanging Fruit Checklist up to par with newer tools and add in footer %>
+    <%= render 'partials/site-footer' unless controller.controller_name == "tools" and params[:action] == "low_hanging_fruit_checklist" %>
+
+    <script>
+      window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "r9ptie9f"
+      };
+    </script>
+
+    <script>
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/r9ptie9f';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+  </body>
+</html>

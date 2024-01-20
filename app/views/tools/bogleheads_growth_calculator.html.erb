@@ -1,0 +1,25 @@
+<%-
+  title "Bogleheads Growth Calculator" 
+  meta_image "og-bogleheads-growth-calculator.png" 
+  description "Want to figure out what three-fund portfolio could give you the best returns over the past 20 years? Play with our Bogleheads Growth Calculator mini-tool to find out."
+  legacy
+-%>
+<div class="relative">
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute left-0 right-0 opacity-25 text-yellow js-background-swoop">
+      <svg width="1429" height="400" viewBox="0 0 1429 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-306 389C-212.482 329.784 46.5801 211.351 334.68 211.351C694.804 211.351 658.127 342.389 971.099 342.389C1221.48 342.389 1355.52 118.13 1418 6" stroke-width="24"/>
+      </svg>
+    </div>
+  </div>
+  <div id="bogleheads-growth-calculator-app" class="relative"></div>
+</div>
+
+<%= javascript_pack_tag 'bogleheads-growth-calculator' %>
+<div hidden>
+<%= form_with model: EarlyAccessUser.new, id: 'early-access-inline-form' do |f| %>
+  <%= f.hidden_field :referrer_id, value: cookies[:referral] if cookies[:referral] %>
+  <%= f.email_field :email, placeholder: 'Enter your email' %>
+  <%= f.submit "Get started" %>
+<% end %>
+</div>

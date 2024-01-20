@@ -1,0 +1,151 @@
+<%- 
+  title "Pricing"
+  description "Whether you're starting your financial journey or looking to preserve and grow your wealth, Maybe is priced to help you reach your goals."
+-%>
+
+<div class="relative overflow-hidden">
+  <div class="absolute top-0 transform -translate-x-1/2 -z-10 left-1/2">
+    <%= render partial: "partials/pricing/bg" %>
+  </div>
+  <div class="absolute left-0 w-full h-full -z-10 -top-16 -bottom-16 shadow-edge-sm" style="height: calc(100% + 4rem)">
+  </div>
+  <section class="relative z-0 px-8 pt-24 pb-8 -mt-24 overflow-hidden sm:pb-22 md:px-0">
+    <div class="relative z-10 flex flex-col items-center px-4 mx-auto mt-10 text-center max-w-7xl">
+      <%= image_tag asset_path("maybe-box-glow.png"), class: 'w-36', alt: '' %>
+      <h1 class="text-4xl font-semibold font-display md:text-5xl">
+        <span class="gradient-heading">Clear,</span>
+        <span class="gradient-heading">simple</span>
+        <span class="gradient-heading">pricing</span>
+      </h1>
+
+      <p class="mt-1 text-lg sm:max-w-xl text-gray-50">
+        Whether you&rsquo;re starting your financial journey or looking to preserve and grow your wealth, Maybe is
+        priced
+        to
+        help you reach your goals.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center max-w-4xl mx-auto mt-8">
+      <div class="inline-flex items-center p-1 space-x-1 bg-gray-800 rounded-xl"
+        style="box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.1);">
+        <% buttonClass = 'tab py-1 px-8 text-center text-base font-semibold text-gray-100 rounded-lg transition-colors cursor-pointer hover:bg-gray-700' %>
+        <label>
+          <input id="pricing-tab-monthly" type="radio" name="pricing-tab" class="hidden tab-input" checked />
+          <div class="<%= buttonClass %>">Monthly</div>
+        </label>
+        <label>
+          <input id="pricing-tab-yearly" type="radio" name="pricing-tab" class="hidden tab-input" />
+          <div class="<%= buttonClass %> flex items-center space-x-3 pr-5">
+            <div>Yearly</div>
+            <div class="px-1.5 py-1 rounded-lg text-sm"
+              style="background: linear-gradient(229.03deg, rgba(248, 249, 250, 0.08) 25.77%, rgba(134, 142, 150, 0.08) 73.24%)">
+              -35%
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Pricing card -->
+      <div class="mt-8 w-full max-w-sm rounded-3xl overflow-hidden p-0.5" style="
+          background:
+            radial-gradient(120% 80% at 70% 0%, #3BC9DB, #3BC9DB44 25%, transparent),
+            radial-gradient(100% 80% at 30% 100%, #F12980, #F1298044 25%, transparent);
+        ">
+        <div class="flex flex-col py-8 px-6 rounded-3xl p-0.5 border-2 border-black bg-black overflow-hidden" style="
+            background-image:
+              radial-gradient(122% 100% at 56% -70%, rgba(76, 201, 240, 0.45), transparent),
+              radial-gradient(82% 68% at 35% 143%, rgba(247, 37, 133, 0.45), transparent),
+              linear-gradient(160deg, rgba(61, 64, 69, 0.1) 18.99%, rgba(22, 22, 26, 0.1) 71.28%),
+              radial-gradient(51% 93% at 50% 39%, rgba(35, 36, 40, 0.8) 0%, rgba(22, 22, 26, 0.064) 100%);
+          ">
+          <div class="shrink-0">
+            <h2 class="text-4xl font-bold gradient-heading md:text-5xl font-display">
+              <span class="pricing-monthly">
+                $19<span class="text-xl sm:text-2xl md:text-3xl">/month</span>
+              </span>
+              <span class="pricing-yearly" style="display: none">
+                $149<span class="text-xl sm:text-2xl md:text-3xl">/year</span>
+              </span>
+            </h2>
+            <div class="font-medium text-gray-100">
+              <span class="pricing-monthly">
+                $228/year billed monthly
+              </span>
+              <span class="pricing-yearly" style="display: none">
+                $12.42/month billed yearly
+              </span>
+            </div>
+
+            <ul class="mt-4 space-y-0.5 list-none text-base">
+              <%
+                features = [
+                  '24/7 access to a financial advisor',
+                  'Net worth dashboard',
+                  'Personal finance insights',
+                  'Investment planning & insights',
+                  'Retirement planning',
+                  'Financial guidance & education',
+                  'No hidden fees',
+                  'Highest levels of security',
+                ]
+
+                features.each_with_index do |feature, index|
+                %>
+              <li class="flex items-center">
+                <i class="text-3xl text-gray-100 ri-check-fill"></i>
+                <span class="ml-3 mr-1.5">
+                  <%= feature %>
+                </span>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+
+          <div class="flex flex-col justify-end flex-grow pt-10">
+            <%= link_to "https://app.maybe.co/register", class: 'flex items-center justify-center py-2 px-3 rounded-lg text-base font-medium text-center text-black bg-white hover:bg-gray-25 transition-colors duration-75' do %>
+            Start 14 day free trial
+            <% end %>
+
+            <div class="flex items-center justify-center mt-3 space-x-1 text-sm text-gray-100">
+              <i class="text-lg ri-bank-card-line"></i>
+              <span>No credit card required</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="max-w-4xl px-8 mx-auto my-26">
+    <div class="text-center">
+      <h1 class="text-2xl font-semibold gradient-heading font-display sm:text-3xl md:text-4xl">
+        FAQs
+      </h1>
+      <p class="mt-1 text-lg text-gray-50">
+        Have a question that is not answered? You can contact us at
+        <a class="underline" href="mailto:hello@maybe.co?subject=Question">hello@maybe.co</a>
+      </p>
+    </div>
+    <div class="mt-10">
+      <h2 class="text-xl font-medium text-white">How does the free trial work?</h2>
+      <p class="mt-4 text-lg text-gray-50">
+        Upon signing up, your 14 day trial will begin. You may choose to subscribe at any point during or after the trial. After 14 days have passed without subscribing, you will lose access to your account.
+      </p>
+    </div>
+    <div class="mt-10">
+      <h2 class="text-xl font-medium text-white">Can I cancel my subscription at any time?</h2>
+      <p class="mt-4 text-lg text-gray-50">
+        Yes, you may cancel your subscription at any time and you will lose access at the end of the billing cycle.
+      </p>
+    </div>
+    <div class="mt-10">
+      <h2 class="text-xl font-medium text-white">How is my payment being processed?</h2>
+      <p class="mt-4 text-lg text-gray-50">
+        Payments are processed securely via Stripe.
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- Get started CTA -->
+<%= render "partials/get-started" %>

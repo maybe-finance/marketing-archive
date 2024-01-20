@@ -1,0 +1,806 @@
+<%- 
+  title "Investors" 
+  description "Thank you to all our investors for supporting Maybe, and believing in our mission to give you control over your finances."
+  legacy
+-%>
+<%
+  tierOneInvestors = [
+    {
+      :name=>"Matthew Paulson",
+      :href => "https://www.mattpaulson.com/"
+    },
+    {
+      :name=>"Ross Hudgens",
+      :href => "https://www.siegemedia.com"
+    },
+    {
+      :name=>"Darian Shirazi",
+      :href => "https://twitter.com/darian314"
+    },
+    {
+      :name=>"Calm Company Fund",
+      :href => "https://calmfund.com/"
+    },
+    {
+      :name=>"Chad Keck",
+      :href => "https://www.chadkeck.com"
+    }
+    
+  ]
+%>
+<%
+  tierTwoInvestors = [
+    {
+      :name=>"Abe Haskins"
+    },
+    {
+      :name=>"Ahmed Alfalah"
+    },
+    {
+      :name=>"Amit Gupta",
+      :href => "http://amitgupta.com"
+    },
+    {
+      :name=>"Andy Powell",
+      :href => "https://www.andypowell.com"
+    },
+    {
+      :name=>"Chang-Woo Lee"
+    },
+    {
+      :name=>"Dan Goldin",
+      :href => "https://dangoldin.com"
+    },
+    {
+      :name=>"Daniel Imfeld",
+      :href => "https://imfeld.dev"
+    },
+    {
+      :name=>"Daniele Salatti",
+      :href => "https://danielesalatti.com"
+    },
+    {
+      :name=>"Denis Lunev",
+      :href => "https://www.depositfix.com/"
+    },
+    {
+      :name=>"Eric Peterson",
+      :href => "http://www.bacarai.com"
+    },
+    {
+      :name=>"Erik Zahnlecker"
+    },
+    {
+      :name=>"Furnée Brands",
+      :href => "http://www.furneebrands.com"
+    },
+    {
+      :name=>"Gabe O'Leary",
+      :href => "http://goleary.com/"
+    },
+    {
+      :name=>"Isaac Specter",
+      :href => "https://www.linkedin.com/in/ispecter/"
+    },
+    {
+      :name=>"James Erving",
+      :href => "https://jameserving.com/"
+    },
+    {
+      :name=>"Jared Kopf"
+    },
+    {
+      :name=>"Joe Gramc",
+      :href => "https://www.twitter.com/joegramc"
+    },
+    {
+      :name=>"John Feminella",
+      :href => "https://jxf.me"
+    },
+    {
+      :name=>"John Plata"
+    },
+    {
+      :name=>"John T. Meyer",
+      :href => "https://twitter.com/johntmeyer"
+    },
+    {
+      :name=>"Justin Klemm",
+      :href => "https://justinklemm.com"
+    },
+    {
+      :name=>"Katz Web Services, Inc.",
+      :href => "https://www.katzwebservices.com"
+    },
+    {
+      :name=>"Kevin Hutchinson",
+      :href => "https://www.linkedin.com/in/hutchike/"
+    },
+    {
+      :name=>"Laura Pearse"
+    },
+    {
+      :name=>"Leland Fiegel",
+      :href => "https://le.land"
+    },
+    {
+      :name=>"Lloyd DSilva",
+      :href => "https://www.linkedin.com/in/lloyddsilva/"
+    },
+    {
+      :name=>"Manjot S Bal"
+    },
+    {
+      :name=>"Mark McDermott",
+      :href => "https://www.markmcdermott.co/"
+    },
+    {
+      :name=>"Matt Gagliano",
+      :href => "https://www.mattgagliano.com"
+    },
+    {
+      :name=>"Matthew Grodin",
+      :href => "http://linkedin.com/in/matthew-grodin-453a83"
+    },
+    {
+      :name=>"Mohit Nagpal",
+      :href => "https://www.linkedin.com/in/mohitnagpaldce"
+    },
+    {
+      :name=>"Pat Flynn",
+      :href => "http://www.patflynn.com"
+    },
+    {
+      :name=>"Patricio Cano",
+      :href => "https://patriciocano.me"
+    },
+    {
+      :name=>"Patrick Sullivan",
+      :href => "https://linqapp.com/patrick"
+    },
+    {
+      :name=>"Paul Ryan"
+    },
+    {
+      :name=>"Raj Logan"
+    },
+    {
+      :name=>"Razvan Ciocanel",
+      :href => "http://chocksy.com"
+    },
+    {
+      :name=>"Rishav D",
+      :href => "https://rishav.in/"
+    },
+    {
+      :name=>"Rishi Desai",
+      :href => "http://swishsmiles.com"
+    },
+    {
+      :name=>"RUOK Management, LLC"
+    },
+    {
+      :name=>"Sanjay Shah",
+      :href => "https://www.linkedin.com/in/sanjay-shah-61537018"
+    },
+    {
+      :name=>"Sindhura Vallabhaneni",
+      :href => "https://twitter.com/skraavi"
+    },
+    {
+      :name=>"Steve Huskins"
+    },
+    {
+      :name=>"Thianh Lu"
+    },
+    {
+      :name=>"Victor Smith"
+    },
+    {
+      :name=>"Yazin Al",
+      :href => "https://yaz.in"
+    },
+    {
+      :name=>"Yevgeniy Reznik"
+    },
+    {
+      :name=>"Yin Yee Lai"
+    },
+    {
+      :name=>"Chip Burns",
+      :href => "http://chipburns.com"
+    },
+    {
+      :name=>"Damien Sutevski",
+      :href => "https://damien.la"
+    },
+    {
+      :name=>"Dan Desrosiers"
+    },
+    {
+      :name=>"Gabriel Rotaru"
+    },
+    {
+      :name=>"Garett Nell",
+      :href => "https://garettnell.com"
+    },
+    {
+      :name=>"Ivan Cheung"
+    },
+    {
+      :name=>"James Chen"
+    },
+    {
+      :name=>"Jared Wymer",
+      :href => "https://www.linkedin.com/in/jareddwymer"
+    },
+    {
+      :name=>"Joel D'Souza",
+      :href => "https://www.linkedin.com/in/joeldsouza/"
+    },
+    {
+      :name=>"Jono Bergquist"
+    },
+    {
+      :name=>"Kimeshan Naidoo",
+      :href => "https://kimeshan.com"
+    },
+    {
+      :name=>"Matthew Gartland"
+    },
+    {
+      :name=>"Mckean Nowlin",
+      :href => "https://chefmckean.com"
+    },
+    {
+      :name=>"Meron Tecle"
+    },
+    {
+      :name=>"Michael Akilian",
+      :href => "https://akilian.com"
+    },
+    {
+      :name=>"Rasty Turek",
+      :href => "https://turek.co"
+    },
+    {
+      :name=>"Robert Bergan"
+    },
+
+  ]
+%>
+<%
+  tierThreeInvestors = [
+    { :name => "Sawyer DuCharm"},
+    { :name => "DeJuan Penn"},
+    { :name => "Janarthan Gnanachandran "},
+    { :name => "Harsha Ravi"},
+    { :name => "Shaquille Gould"},
+    { :name => "Joe Davini"},
+    { :name => "Ahmad Abugosh"},
+    { :name => "Patrick Mellor"},
+    { :name => "Macgill Davis"},
+    { :name => "Konstantin Ivanov"},
+    { :name => "Gertrude Morgan "},
+    { :name => "Matt Duffy"},
+    { :name => "Lakshmana Rallapalli"},
+    { :name => "Shashi Kiran"},
+    { :name => "K. Mike Merrill"},
+    { :name => "Jorge Albaladejo Pomares"},
+    { :name => "Leonard Drapeza"},
+    { :name => "Shawn Tolidano"},
+    { :name => "Laura Stanley "},
+    { :name => "Manoj Sonje"},
+    { :name => "Ethan Hampton"},
+    { :name => "Samuel Apata"},
+    { :name => "Shaun Burch"},
+    { :name => "Jeriel Acosta"},
+    { :name => "Jordan Julian"},
+    { :name => "Rakesh Ravuru"},
+    { :name => "Paul Fickes"},
+    { :name => "Wendy Daniels"},
+    { :name => "Fahad Alaradah"},
+    { :name => "Desiree Robertson"},
+    { :name => "Debra Farber"},
+    { :name => "Kevin Corrier-Cox"},
+    { :name => "Jess Archer"},
+    { :name => "Andrew Gordon"},
+    { :name => "Juan Arias"},
+    { :name => "Kelvin Cox"},
+    { :name => "Anthony O'Neal "},
+    { :name => "Matt Pritchett"},
+    { :name => "Michael Marino"},
+    { :name => "Peter Burns "},
+    { :name => "Vatsal Harshad Shah"},
+    { :name => "Paul Morren"},
+    { :name => "Aaron Corbett"},
+    { :name => "Thiago Araujo"},
+    { :name => "Scott Rains"},
+    { :name => "Girri Palaniyapan"},
+    { :name => "Andre Queen"},
+    { :name => "Norberto Mancilla"},
+    { :name => "Pat Walls"},
+    { :name => "Rajesh Karmani"},
+    { :name => "Pete DiLorenzo"},
+    { :name => "Austin Hwang"},
+    { :name => "Gary Simmons"},
+    { :name => "Eric Grigorian"},
+    { :name => "Armen Mardirousi"},
+    { :name => "Aziz Rehmatullah"},
+    { :name => "Nicholas Matta"},
+    { :name => "Kevin Marsden"},
+    { :name => "Matthew Hefferon"},
+    { :name => "Humberto Camarillo Ch."},
+    { :name => "Dale Langley"},
+    { :name => "Rafael Dahis"},
+    { :name => "Rasul Kireev"},
+    { :name => "Ben Selvaggio"},
+    { :name => "Adam Larson"},
+    { :name => "Jacob Blevins"},
+    { :name => "Johannes K."},
+    { :name => "Nick Martinovic"},
+    { :name => "Colin Smith"},
+    { :name => "CA Hatch"},
+    { :name => "Jamie Wright"},
+    { :name => "Vilem Fruhbauer"},
+    { :name => "Jake Weidenfeller "},
+    { :name => "Tsitsi Mafuta "},
+    { :name => "Jose M Rocha"},
+    { :name => "Shannon Jones"},
+    { :name => "Josh Phillips"},
+    { :name => "Jaybo.eth"},
+    { :name => "Kelley Stock"},
+    { :name => "Shoaib Mohiuddin"},
+    { :name => "Pius Nunyah "},
+    { :name => "Kiran Akkineni "},
+    { :name => "Geoff Graham"},
+    { :name => "Tim Brensdal"},
+    { :name => "Evans Akanno"},
+    { :name => "Shriganesh Bhat"},
+    { :name => "Aziz Lafargue"},
+    { :name => "Eyad Hussein "},
+    { :name => "Julian Anderson"},
+    { :name => "Eric Daluga"},
+    { :name => "Sahil Joshi"},
+    { :name => "Hugh Bien"},
+    { :name => "Rajat Toshniwal"},
+    { :name => "Andrew Eugene Choi"},
+    { :name => "Amelia Steed"},
+    { :name => "Darlene Wallace"},
+    { :name => "Nishant Arora"},
+    { :name => "Manish Motwani"},
+    { :name => "Shayne Flaherty"},
+    { :name => "Robert Dunlop "},
+    { :name => "Miguel Piedrafita"},
+    { :name => "Jeffrey Schmitz"},
+    { :name => "Nixson Nyi Nyi"},
+    { :name => "William Drevescraft "},
+    { :name => "Stefano Vettorazzi"},
+    { :name => "Jawaun Brown"},
+    { :name => "Dennis Juanito"},
+    { :name => "Aunnie Patton Power"},
+    { :name => "Justin Carter"},
+    { :name => "Ayaz Parbtani"},
+    { :name => "Zach N"},
+    { :name => "Steven Dunston "},
+    { :name => "Ishaan Kakkar"},
+    { :name => "Niklas Stephenson"},
+    { :name => "Pedro Piñera Buendía"},
+    { :name => "Mark Porter"},
+    { :name => "Francesco Gaini"},
+    { :name => "Solomon Fulton "},
+    { :name => "Ahmed El Azzabi"},
+    { :name => "Brian Foody"},
+    { :name => "Ilya Novikov"},
+    { :name => "Jacob Jonsson"},
+    { :name => "Nicolas Mérouze"},
+    { :name => "Ryan Graysmark"},
+    { :name => "Manish Chiniwalar "},
+    { :name => "Till Ohrmann"},
+    { :name => "Jamah Williams"},
+    { :name => "Malcolm Jack"},
+    { :name => "Faisal Ajaji"},
+    { :name => "Ilya Lyamkin"},
+    { :name => "Yousef Al-Husaini"},
+    { :name => "Peder Johnsen"},
+    { :name => "Lalit Kale"},
+    { :name => "Michael Bracklo"},
+    { :name => "Derick Mokgahla"},
+    { :name => "Thomas Vermin"},
+    { :name => "Christopher Majka"},
+    { :name => "Diogo Beda"},
+    { :name => "John Straub"},
+    { :name => "Tak Mazarura"},
+    { :name => "Jacob M. Smith"},
+    { :name => "Kurt Williamson"},
+    { :name => "Desmond Foo"},
+    { :name => "Subodh Kolhe"},
+    { :name => "Matt Trask"},
+    { :name => "James Slusser"},
+    { :name => "Sebastien Barrau"},
+    { :name => "Massimo Caradonna "},
+    { :name => "Jacob Boyer"},
+    { :name => "Gaurav Tulsyan"},
+    { :name => "Francisco Malafaya"},
+    { :name => "Adam Murad"},
+    { :name => "Florian Poprat"},
+    { :name => "Austin Rosenfeld"},
+    { :name => "Ritwik Manan"},
+    { :name => "Erick Bastidas"},
+    { :name => "Bryian Tan"},
+    { :name => "Zachary Weiner"},
+    { :name => "Frank Petruccelli "},
+    { :name => "Lorenso Herrera "},
+    { :name => "Praveen Kavuri"},
+    { :name => "Miguel Estrella"},
+    { :name => "Kevin Lobo"},
+    { :name => "Eric Couture"},
+    { :name => "Ari Helfenstein"},
+    { :name => "Justin Ruckman"},
+    { :name => "Sarah Birkhofer"},
+    { :name => "Sacha Nasan"},
+    { :name => "Mark Howley"},
+    { :name => "Fabio Giolito"},
+    { :name => "Ahmad Elsayeed koutb "},
+    { :name => "Philip Manning"},
+    { :name => "Kevin Lam"},
+    { :name => "Loukas Tournatzis"},
+    { :name => "Pierre de Wulf"},
+    { :name => "Steve Boyer"},
+    { :name => "Aditya Purandare"},
+    { :name => "Adam Bhakrani"},
+    { :name => "Babatunde Aloba"},
+    { :name => "Michael Ayoola "},
+    { :name => "Sina Saeidi"},
+    { :name => "Danny Sung"},
+    { :name => "Pave Sturman"},
+    { :name => "Mike Holford"},
+    { :name => "David Kraft"},
+    { :name => "Ramesh Ramlakhan"},
+    { :name => "Joe Dan Beavers"},
+    { :name => "Kyle Pendergast"},
+    { :name => "Todd Youngblood"},
+    { :name => "Erik Welker"},
+    { :name => "Paul Nelson"},
+    { :name => "Dustin Spears"},
+    { :name => "Jeff Lazcano"},
+    { :name => "Daniel Lobaton"},
+    { :name => "Dave Gaeddert"},
+    { :name => "Nathan Kinch"},
+    { :name => "John Maggio "},
+    { :name => "Alyn Wesley"},
+    { :name => "Onur Andic"},
+    { :name => "Joel Gaeddert"},
+    { :name => "Graeme Ahokas"},
+    { :name => "Alec Wilson"},
+    { :name => "Andrew R McHugh"},
+    { :name => "Rajib Mandal"},
+    { :name => "Adam Murad"},
+    { :name => "AJ Mobile Money"},
+    { :name => "Giacomo D'Angelo"},
+    { :name => "SR & HM"},
+    { :name => "Matt Brien"},
+    { :name => "Collins Agbonghama"},
+    { :name => "David Lindahl"},
+    { :name => "Rajan Sharma "},
+    { :name => "Nicolas Grenié"},
+    { :name => "Jose Rocha "},
+    { :name => "Ramsey Rozmid"},
+    { :name => "Khairul Norady"},
+    { :name => "Alan Ma"},
+    { :name => "Khurram Mahmood"},
+    { :name => "Tien Pham Huu"},
+    { :name => "Ben Wisbey"},
+    { :name => "Thomas Alford"},
+    { :name => "Cameron Nuckols"},
+    { :name => "Richard Guan"},
+    { :name => "Alan Hoskins"},
+    { :name => "Takashi Sengoku "},
+    { :name => "Matt Flanders "},
+    { :name => "Samuel Batista"},
+    { :name => "John Pham"},
+    { :name => "William Miller"},
+    { :name => "VAN LAL REM"},
+    { :name => "Mehdi Tafraoui"},
+    { :name => "Sharath Ramesh"},
+    { :name => "Michael Lee"},
+    { :name => "Eugene Mc Elroy "},
+    { :name => "Udit Goenka"},
+    { :name => "Primoz Zagoricnik"},
+    { :name => "Doug Black"},
+    { :name => "Kyle Gawley"},
+    { :name => "Jiji chan"},
+    { :name => "Kit Pokorny"},
+    { :name => "Brian DeMarzo"},
+    { :name => "Matt Swanson"},
+    { :name => "Pablo Cárdenas Oliveros"},
+    { :name => "Tirupathi Mangalarapu"},
+    { :name => "Terrance McArthur"},
+    { :name => "Leonard Wong"},
+    { :name => "Leonard Wong"},
+    { :name => "Eric Lane"},
+    { :name => "Jacques Cartier"},
+    { :name => "Mark Wahba"},
+    { :name => "Bryant Young"},
+    { :name => "Onur Günduru"},
+    { :name => "Neil Renicker"},
+    { :name => "Lucas Maldonado"},
+    { :name => "Bradley Price"},
+    { :name => "Ricardo Rodriguez "},
+    { :name => "Zack Field"},
+    { :name => "Jacob Bolda"},
+    { :name => "Geoff Dudgeon"},
+    { :name => "Hardik Jogi"},
+    { :name => "Afzal sayed"},
+    { :name => "Maurice Thompson"},
+    { :name => "Altaf Dhamani"},
+    { :name => "Vinam Suri"},
+    { :name => "David Martinelli"},
+    { :name => "Harman Walia"},
+    { :name => "Yehuda Leibler"},
+    { :name => "Shwaytaj Raste"},
+    { :name => "Eric Friedman"},
+    { :name => "Michel Binkhorst"},
+    { :name => "Jim Hill"},
+    { :name => "Richard Welsh"},
+    { :name => "Harris Karim"},
+    { :name => "Nathan Dias"},
+    { :name => "Devon Lind"},
+    { :name => "Jim Baca"},
+    { :name => "Ross Winn"},
+    { :name => "Rudy J. Ellis"},
+    { :name => "Raphael Wouters"},
+    { :name => "Julian Bonilla"},
+    { :name => "Aagam Shah"},
+    { :name => "Tom Connole"},
+    { :name => "Rahul Chaudhary"},
+    { :name => "Jingwei Zhang"},
+    { :name => "Bryce Mintie"},
+    { :name => "Riley Kirkpatrick"},
+    { :name => "Leo Liberman"},
+    { :name => "Mokhtar Mial"},
+    { :name => "Adam Ruf"},
+    { :name => "Dave Cowart"},
+    { :name => "Shek Ka Wai 阿石"},
+    { :name => "Simon Williams"},
+    { :name => "Akash Joshi"},
+    { :name => "John Meese"},
+    { :name => "Justin Jackson"},
+    { :name => "Nikhil Shrivastav"},
+    { :name => "Dan Watson"},
+    { :name => "Andrew Bushnell"},
+    { :name => "Josef Lischka"},
+    { :name => "Benoit Epopi"},
+    { :name => "Rod Richmond"},
+    { :name => "Wesley Ross"},
+    { :name => "Pedro Pregueiro"},
+    { :name => "Tim Gieseking"},
+    { :name => "Justin Leapline"},
+    { :name => "Chad Hutchins"},
+    { :name => "Nicole James"},
+    { :name => "Trevor Longino"},
+    { :name => "Mel Larsen"},
+    { :name => "Vance Lucas"},
+    { :name => "Jon Sisk"},
+    { :name => "Chris Carlson"},
+    { :name => "Chris Messina"},
+    { :name => "Rob Rose"},
+    { :name => "Ricardo Seixas"},
+    { :name => "Shawn Dockstader"},
+    { :name => "David Leshaw"},
+    { :name => "Riana Lynn"},
+    { :name => "Jason D. Rowley"},
+    { :name => "Andrew Lin"},
+    { :name => "Roberto Agreda "},
+    { :name => "Colin Nederkoorn"},
+    { :name => "Jp Marin Diaz"},
+    { :name => "Nick Campbell"},
+    { :name => "Lee McAlilly"},
+    { :name => "Ron Tidhar"},
+    { :name => "Andrew Velis"},
+    { :name => "Jeffrey schultz"},
+    { :name => "Matt Fischman"},
+    { :name => "Chris Eigner"},
+    { :name => "Mike Cappucci"},
+    { :name => "Denis Barushev"},
+    { :name => "Randall Coston"},
+    { :name => "Brian Sierakowski"},
+    { :name => "Carlos Rodriguez"},
+    { :name => "Owen McCrink"},
+    { :name => "Paulo Bechara"},
+    { :name => "Vincent Charretier"},
+    { :name => "Donald Fleurantin"},
+    { :name => "Anshul Shah"},
+    { :name => "Joe Sefton"},
+    { :name => "Isern Palaus"},
+    { :name => "Shaun W. Kielo"},
+    { :name => "Niraj Pandey"},
+    { :name => "Matt Durr"},
+    { :name => "Thomas Harvey"},
+    { :name => "Kal Turnbull"},
+    { :name => "Brian G. Lester"},
+    { :name => "Josh M. Luty"},
+    { :name => "Didier Baquier"},
+    { :name => "Magnus Hjelm"},
+    { :name => "Tan Quan Nguyen"},
+    { :name => "David Hemphill"},
+    { :name => "Dinesh Raveendran"},
+    { :name => "Luc Castera"},
+    { :name => "Aditya Goyal"},
+    { :name => "Quang Ho"},
+    { :name => "Eric Yu"},
+    { :name => "Jason Roper"},
+    { :name => "Jeremy Noonan"},
+    { :name => "George Z. Adkins"},
+    { :name => "Wesley Worth"},
+    { :name => "Will McClure"},
+    { :name => "Matt Croydon"},
+    { :name => "Tim Wilson"},
+    { :name => "Adii Pienaar"},
+    { :name => "Lucas Ribeiro"},
+    { :name => "Kevin Liang"},
+    { :name => "Christopher Gimmer"},
+    { :name => "Nathaniel Roberts"},
+    { :name => "Miriam Brafman"},
+    { :name => "Colin Goudie"},
+    { :name => "Ranjan Sahil Saini"},
+    { :name => "Kevin Southworth"},
+    { :name => "Carmine Di Martino"},
+    { :name => "Andrew Amann"},
+    { :name => "Collin Bigart"},
+    { :name => "Candice Lacey"},
+    { :name => "Ryan Winchester"},
+    { :name => "Kristian Paljasma"},
+    { :name => "Bart Ligthart"},
+    { :name => "Nicolas Provost"},
+    { :name => "Murat Bogazkesenli"},
+    { :name => "Adam Feber"},
+    { :name => "Simon Soriano"},
+    { :name => "Aishwarya Goenka"}
+  ]
+%>
+<div class="relative overflow-hidden">
+  <div class="absolute top-0 left-0 z-0 text-blue opacity-70 js-background-swoop">
+    <svg width="770" height="270" viewBox="0 0 770 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M-191.784 257.967C-141.52 226.518 -87.6034 65.4967 122.62 74.8301C332.843 84.1635 344.4 199.619 518.937 187.813C658.567 178.368 726.169 67.571 757.435 12.3442"
+        stroke="url(#paint0_linear)" stroke-width="24" stroke-linecap="round" />
+    </svg>
+  </div>
+  <div class="relative z-10 px-4 pb-20 pt-14 sm:px-12">
+    <header class="">
+      <div class="max-w-xl mx-auto text-center">
+        <h1 class="mt-10 text-2xl font-extrabold sm:text-4xl lg:text-5xl lg:leading-snug font-display sm:mt-16">
+          Investors
+        </h1>
+        <p class="max-w-md mx-auto mt-4 text-white text-opacity-80 sm:max-w-xl sm:text-lg">Below are the names of the
+          people that backed us during our crowdfunding campaign on <a class="text-opacity-100 underline text-teal"
+            href="https://republic.co/maybefinance" target="_blank" rel="nofollow">Republic</a> and AngelList. A sincere
+          thanks to each and every one of you for supporting us, and believing in our mission to give you control over
+          your finances.</p>
+      </div>
+      <div class="pb-12 mt-8 sm:mt-10 lg:mt-14 sm:pb-16">
+        <div class="relative">
+          <div class="relative max-w-xs px-4 mx-auto sm:max-w-sm lg:max-w-xl sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+              <dl class="grid grid-cols-2">
+                <div class="flex flex-col text-center">
+                  <dt class="order-2 text-sm text-gray-100 sm:text-base lg:mt-2">
+                    raised
+                  </dt>
+                  <dd class="order-1 text-lg font-extrabold font-display sm:text-xl lg:text-3xl">
+                    $1.45m
+                  </dd>
+                </div>
+                <div class="flex flex-col text-center">
+                  <dt class="order-2 text-sm text-gray-100 sm:text-base lg:mt-2">
+                    investors
+                  </dt>
+                  <dd class="order-1 text-lg font-extrabold font-display sm:text-xl lg:text-3xl">
+                    1,386
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mt-16">
+      <div class="space-y-12 sm:space-y-16 lg:space-y-24">
+        <!-- Invested 25k+ -->
+        <section>
+          <div class="text-center">
+            <%= image_tag "tier-one-investor.svg", class: 'w-28 mx-auto', alt: 'Maybe Tier One Investors' %>
+            <h2 class="mt-8 text-lg font-extrabold font-display sm:text-xl lg:text-2xl">Invested <span
+                class="text-teal">$25k</span> or more</h2>
+          </div>
+          <div class="max-w-sm mx-auto mt-8 sm:max-w-4xl">
+            <ul class="grid grid-cols-2 gap-5 sm:grid-cols-4 lg:gap-10">
+              <% tierOneInvestors.sort_by { |inv| inv[:name] }.each do |investors| %>
+              <li class="flex flex-col items-center justify-center">
+                <a href="<%= investors[:href] %>" class="inline-flex items-center mt-4 group" target="_blank"
+                  rel="nofollow">
+                  <span class="transition-colors duration-75 group-hover:text-gray-100">
+                    <%= investors[:name] %>
+                  </span>
+                  <span class="inline-flex items-center justify-center w-4 h-4 ml-2">
+                    <svg class="transition-colors duration-75 text-gray-100 group-hover:text-gray-700"
+                      viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.2709 7.88517L9.32819 6.94251L10.2709 5.99984C10.5185 5.75221 10.7149 5.45823 10.8489 5.13469C10.9829 4.81115 11.0519 4.46437 11.0519 4.11417C11.0519 3.76397 10.9829 3.4172 10.8489 3.09366C10.7149 2.77011 10.5185 2.47614 10.2709 2.22851C10.0232 1.98088 9.72925 1.78445 9.4057 1.65043C9.08216 1.51642 8.73539 1.44744 8.38519 1.44744C8.03499 1.44744 7.68822 1.51642 7.36467 1.65043C7.04113 1.78445 6.74715 1.98088 6.49952 2.22851L5.55685 3.17117L4.61419 2.22851L5.55685 1.28584C6.30906 0.545786 7.32323 0.132944 8.37844 0.13724C9.43366 0.141537 10.4444 0.562624 11.1906 1.30878C11.9367 2.05494 12.3578 3.06571 12.3621 4.12092C12.3664 5.17613 11.9536 6.1903 11.2135 6.94251L10.2709 7.88517ZM8.38485 9.77117L7.44219 10.7138C7.07187 11.0902 6.63069 11.3896 6.1441 11.5946C5.65751 11.7997 5.13513 11.9064 4.60711 11.9085C4.07908 11.9107 3.55586 11.8082 3.06761 11.6072C2.57937 11.4061 2.13577 11.1103 1.76239 10.737C1.38902 10.3636 1.09327 9.91999 0.892193 9.43175C0.691119 8.9435 0.588703 8.42028 0.590853 7.89225C0.593004 7.36423 0.699677 6.84185 0.90472 6.35526C1.10976 5.86867 1.40912 5.42749 1.78552 5.05717L2.72819 4.11451L3.67085 5.05717L2.72819 5.99984C2.48056 6.24747 2.28413 6.54145 2.15011 6.86499C2.0161 7.18853 1.94712 7.53531 1.94712 7.88551C1.94712 8.23571 2.0161 8.58248 2.15011 8.90602C2.28413 9.22956 2.48056 9.52354 2.72819 9.77117C2.97582 10.0188 3.2698 10.2152 3.59334 10.3492C3.91688 10.4833 4.26365 10.5522 4.61385 10.5522C4.96406 10.5522 5.31083 10.4833 5.63437 10.3492C5.95791 10.2152 6.25189 10.0188 6.49952 9.77117L7.44219 8.82851L8.38485 9.77117ZM8.38485 3.17117L9.32819 4.11451L4.61419 8.82784L3.67085 7.88517L8.38485 3.17184V3.17117Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </section>
+        <!-- Invested 5k+ -->
+        <section>
+          <div class="text-center">
+            <%= image_tag "tier-two-investor.svg", class: 'w-28 mx-auto', alt: 'Maybe Tier Two Investors' %>
+            <h2 class="mt-8 text-lg font-extrabold font-display sm:text-xl lg:text-2xl">Invested <span
+                class="text-teal">$5k</span> or more</h2>
+          </div>
+          <div class="max-w-sm mx-auto mt-8 sm:max-w-4xl">
+            <!-- TODO: layout -->
+            <ul class="grid grid-cols-2 sm:grid-cols-4">
+              <% tierTwoInvestors.sort_by { |inv| inv[:name] }.each do |investors| %>
+              <li class="flex flex-col items-center justify-center">
+                <% if investors[:href].present? %>
+                <a href="<%= investors[:href] %>" class="inline-flex items-center mt-4 group" target="_blank"
+                  rel="nofollow">
+                  <% else %>
+                  <div class="inline-flex items-center mt-4 group">
+                    <% end %>
+                    <span
+                      class="transition-colors duration-75<% if investors[:href].present? %> group-hover:text-gray<% end %>">
+                      <%= investors[:name] %>
+                    </span>
+                    <% if investors[:href].present? %>
+                    <span class="inline-flex items-center justify-center w-4 h-4 ml-2">
+                      <svg class="transition-colors duration-75 text-gray-100 group-hover:text-gray-700"
+                        viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.2709 7.88517L9.32819 6.94251L10.2709 5.99984C10.5185 5.75221 10.7149 5.45823 10.8489 5.13469C10.9829 4.81115 11.0519 4.46437 11.0519 4.11417C11.0519 3.76397 10.9829 3.4172 10.8489 3.09366C10.7149 2.77011 10.5185 2.47614 10.2709 2.22851C10.0232 1.98088 9.72925 1.78445 9.4057 1.65043C9.08216 1.51642 8.73539 1.44744 8.38519 1.44744C8.03499 1.44744 7.68822 1.51642 7.36467 1.65043C7.04113 1.78445 6.74715 1.98088 6.49952 2.22851L5.55685 3.17117L4.61419 2.22851L5.55685 1.28584C6.30906 0.545786 7.32323 0.132944 8.37844 0.13724C9.43366 0.141537 10.4444 0.562624 11.1906 1.30878C11.9367 2.05494 12.3578 3.06571 12.3621 4.12092C12.3664 5.17613 11.9536 6.1903 11.2135 6.94251L10.2709 7.88517ZM8.38485 9.77117L7.44219 10.7138C7.07187 11.0902 6.63069 11.3896 6.1441 11.5946C5.65751 11.7997 5.13513 11.9064 4.60711 11.9085C4.07908 11.9107 3.55586 11.8082 3.06761 11.6072C2.57937 11.4061 2.13577 11.1103 1.76239 10.737C1.38902 10.3636 1.09327 9.91999 0.892193 9.43175C0.691119 8.9435 0.588703 8.42028 0.590853 7.89225C0.593004 7.36423 0.699677 6.84185 0.90472 6.35526C1.10976 5.86867 1.40912 5.42749 1.78552 5.05717L2.72819 4.11451L3.67085 5.05717L2.72819 5.99984C2.48056 6.24747 2.28413 6.54145 2.15011 6.86499C2.0161 7.18853 1.94712 7.53531 1.94712 7.88551C1.94712 8.23571 2.0161 8.58248 2.15011 8.90602C2.28413 9.22956 2.48056 9.52354 2.72819 9.77117C2.97582 10.0188 3.2698 10.2152 3.59334 10.3492C3.91688 10.4833 4.26365 10.5522 4.61385 10.5522C4.96406 10.5522 5.31083 10.4833 5.63437 10.3492C5.95791 10.2152 6.25189 10.0188 6.49952 9.77117L7.44219 8.82851L8.38485 9.77117ZM8.38485 3.17117L9.32819 4.11451L4.61419 8.82784L3.67085 7.88517L8.38485 3.17184V3.17117Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <% end %>
+                    <% if investors[:href].present? %>
+                </a>
+                <% else %>
+          </div>
+          <% end %>
+          </li>
+          <% end %>
+          </ul>
+      </div>
+      </section>
+      <!-- Invested 500+ -->
+      <section>
+        <div class="text-center">
+          <%= image_tag "tier-three-investor.svg", class: 'w-28 mx-auto', alt: 'Maybe Tier Three Investors' %>
+          <h2 class="mt-8 text-lg font-extrabold font-display sm:text-xl lg:text-2xl">Invested <span
+              class="text-teal">$100</span> or more</h2>
+        </div>
+        <div class="max-w-sm mx-auto mt-8 sm:max-w-4xl">
+          <!-- TODO: layout -->
+          <ul class="column-2 sm:column-4">
+            <% tierThreeInvestors.sort_by { |inv| inv[:name] }.each do |investors| %>
+            <li class="text-center">
+              <%= investors[:name] %>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </section>
+  </div>
+</div>
+</div>
+</div>
+
+<%= render "partials/get-started" %>

@@ -1,0 +1,16 @@
+<% content_for :feature_card__title do %>
+See how you stack up
+<% end %>
+
+<% content_for :feature_card__description do %>
+Benchmark your returns against indexes and other assets
+<% end %>
+
+<% content_for :feature_card__color do %>#11E4FF<% end %>
+<% content_for :feature_card__border_color do %>#52EDFF<% end %>
+
+<% content_for :feature_card__content do %>
+<div class="w-full mb-0 sm:-mb-12 md:-mb-24">
+    <%= image_tag asset_path("home/stack-up.png"), class: 'w-full', alt: '' %>
+</div>
+<% end %>

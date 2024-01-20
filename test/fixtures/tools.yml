@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Dividend calculator
+  description: Calculate the dividend yield on a stock over a period of time
+  topic: Investing
+  sub_topic: Investment Optimization
+  status: on_vote
+  email: josh@maybe.co
+
+two:
+  name: Stock Analyzer
+  description: Check out important metrics about a particular stock and play with the data as you wish
+  topic: Investing
+  sub_topic: Investment Performance
+  status: on_vote
+  email: saulo@maybe.co

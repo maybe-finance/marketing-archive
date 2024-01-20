@@ -1,0 +1,2 @@
+class EquityPrice < ApplicationRecord
+end

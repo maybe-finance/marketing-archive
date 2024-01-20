@@ -1,0 +1,15 @@
+<%- 
+  title "Financial Low‑Hanging Fruit Checklist" 
+  meta_image "og-low-hanging-fruit.png"
+  description "Maybe's Financial Low‑Hanging Fruit Checklist gets you personalized recommendations on small tweaks you can make to your finances that yield outsized benefits for your situation."
+  legacy
+-%>
+<div id="low-hanging-fruit-checklist-app"></div>
+<%= javascript_pack_tag 'low-hanging-fruit-checklist' %>
+<div hidden>
+<%= form_with model: EarlyAccessUser.new, id: 'early-access-inline-form' do |f| %>
+  <%= f.hidden_field :referrer_id, value: cookies[:referral] if cookies[:referral] %>
+  <%= f.email_field :email, placeholder: 'Enter your email' %>
+  <%= f.submit "Get started" %>
+<% end %>
+</div>

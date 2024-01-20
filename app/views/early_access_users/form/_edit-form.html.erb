@@ -1,0 +1,49 @@
+<%= form_with model: @user, class: "max-w-xl mx-auto space-y-6" do |f| %>
+<div>
+  <%= f.label :full_name, "Your name", class: "block text-white opacity-80 mb-2" %>
+  <%= f.text_field :full_name, placeholder: 'Your first and last name', class: "bg-full-black border-none focus:border-teal focus:ring-teal focus:ring-2 w-full h-14 px-4 rounded-xl placeholder-gray" %>
+</div>
+<div>
+  <%= f.label :email, "Your email address", class: "block text-white opacity-80 mb-2" %>
+  <%= f.email_field :email, placeholder: 'you@example.com', class: "bg-full-black border-none focus:border-teal focus:ring-teal focus:ring-2 w-full h-14 px-4 rounded-xl placeholder-gray" %>
+</div>
+
+<div>
+  <%= f.label :location, "Your location", class: "block text-white opacity-80 mb-2" %>
+  <%= f.country_select :country, { include_blank: true }, { class: "appearance-none bg-full-black border-none focus:border-teal focus:ring-teal focus:ring-2 w-full h-14 px-4 rounded-xl placeholder-gray" } %>
+</div>
+
+<div>
+  <%= f.label :age, "Your age", class: "block text-white opacity-80 mb-2" %>
+  <%= f.select :age, ["Under 18", "18-24", "25-34", "35-44", "45-54", "55-64", "Over 65"], { include_blank: true }, { class: "appearance-none bg-full-black border-none focus:border-teal focus:ring-teal focus:ring-2 w-full h-14 px-4 rounded-xl placeholder-gray" } %>
+</div>
+
+<div>
+  <%= f.label :device, "What device will you use for managing finances?", class: "block text-white opacity-80 mb-2" %>
+  <%= f.select :device, ["Desktop", "Mobile", "Both equally"], { include_blank: true }, { class: "appearance-none bg-full-black border-none focus:border-teal focus:ring-teal focus:ring-2 w-full h-14 px-4 rounded-xl placeholder-gray" } %>
+</div>
+
+<div>
+  <%= f.label :interests, "What areas of personal finance are you most interested in?", class:  "block text-white opacity-80 mb-2" %>
+  <ul class="space-y-6">
+    <%= f.collection_check_boxes :interests, [['Financial independence'], ['Retirement planning'], ['Investment management'], ['Financial literacy']], :first, :first do |b| %>
+    <li class="flex items-center justify-start space-x-4">
+      <%= b.check_box(class: "bg-full-black w-6 h-6 text-teal rounded border-2 border-gray focus:border-teal focus:ring-teal focus:ring-2") %>
+      <%= b.label %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <%= f.label :current, "What do you currently use to manage finances/investments? ", class: "block text-white opacity-80 mb-2" %>
+  <%= f.text_area :current, class: "bg-full-black border-none focus:border-teal focus:ring-teal focus:ring-2 w-full h-32 p-4 resize-none rounded-xl placeholder-gray" %>
+</div>
+
+<div>
+  <%= f.label :comments, "Any other comments, suggestions, thoughts, etc? ", class: "block text-white opacity-80 mb-2" %>
+  <%= f.text_area :comments, class: "bg-full-black border-none focus:border-teal focus:ring-teal focus:ring-2 w-full h-32 p-4 resize-none rounded-xl placeholder-gray" %>
+</div>
+
+<%= f.submit "Update my early access info", class: "appearance-none font-semibold text-sm bg-teal text-black rounded-md py-2 px-4 transition-colors hover:bg-teal-500 w-full" %>
+<% end %>

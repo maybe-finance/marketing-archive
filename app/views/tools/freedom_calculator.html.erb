@@ -1,0 +1,23 @@
+<%- 
+  title "Financial Freedom Calculator"
+  meta_image "og-freedom-calculator.png" 
+  description "Wanna know how many years of financial freedom you have ahead of you based on your savings and expenses? Take a look at Maybe's Financial Freedom Calculator and see how long your savings will last! "
+  legacy
+-%>
+<div class="relative overflow-hidden">
+  <div class="absolute left-0 right-0 text-blue js-background-swoop">
+    <svg width="1429" height="400" viewBox="0 0 1429 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-306 389C-212.482 329.784 46.5801 211.351 334.68 211.351C694.804 211.351 658.127 342.389 971.099 342.389C1221.48 342.389 1355.52 118.13 1418 6" stroke-width="24"/>
+    </svg>
+  </div>
+
+  <div id="freedom-calculator-app" class="relative"></div>
+  <%= javascript_pack_tag 'freedom-calculator' %>
+  <div hidden>
+  <%= form_with model: EarlyAccessUser.new, id: 'early-access-inline-form' do |f| %>
+    <%= f.hidden_field :referrer_id, value: cookies[:referral] if cookies[:referral] %>
+    <%= f.email_field :email, placeholder: 'Enter your email' %>
+    <%= f.submit "Get started" %>
+  <% end %>
+  </div>
+</div>

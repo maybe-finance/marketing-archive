@@ -1,0 +1,2 @@
+class BiEvent < ApplicationRecord
+end

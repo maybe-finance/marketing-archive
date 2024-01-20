@@ -1,0 +1,99 @@
+<div class="relative z-10 px-4 mx-auto mb-32 max-w-7xl sm:px-8">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xs:gap-6">
+  <%
+
+    bg_variants = [
+      "bg-gradient-to-br from-blue to-teal",
+      "bg-gradient-to-br from-red via-lilac to-teal",
+      "bg-gradient-to-br from-purple to-pink",
+      "bg-gradient-to-br from-yellow via-orange to-red",
+      "bg-gradient-to-br from-purple to-blue",
+      "bg-gradient-to-br from-white to-blue",
+    ]
+
+    cta_variants = {
+      :teal => "text-black bg-teal group-hover:bg-teal-500", # default
+      :black => "text-white bg-black",
+    }
+
+    [
+      {
+        :href => "/tools/low-hanging-fruit-checklist",
+        :title => "Low Hanging Fruit Checklist",
+        :description => "Learn what financial tasks can yield the biggest benefits for your situation",
+      },
+      {
+        :href => "/tools/freedom-calculator",
+        :title => "Financial Freedom Calculator",
+        :description => "Based on your savings, expenses, and passive income, see how long you could have complete financial freedom",
+      },
+      {
+        :href => "/tools/fomo-calculator",
+        :title => "FOMO Calculator",
+        :description => "That $45,000 Land Rover you bought a few years ago...what if you had put it in to AAPL instead?",
+      },
+      {
+        :href => "/tools/bogleheads-growth-calculator",
+        :title => "Bogleheads Growth Calculator",
+        :description => "Find out what three-fund portfolio could give you the best returns",
+      },
+      {
+        :href => "/tools/crypto-index-fund",
+        :title => "Crypto Index Fund",
+        :description => "Simulate investments in a wide range of crypto themes using a selection of premade crypto index funds",
+      },
+      {
+        :href => "/tools/compound-interest-calculator",
+        :title => "Compound Interest Calculator",
+        :description => "See how your investments grow over time by earning interest on interest and letting your money work for you",
+      },
+      {
+        :href => "/tools/vote",
+        :title => "Vote on what we should build next",
+        :description => "Cast your vote for your favourite tool",
+        :icon => "bg-blue bg-opacity-10 ri-arrow-up-s-fill text-blue ri-2x",
+        :cta => "Vote now",
+        :cta_variant => cta_variants[:black],
+      },
+      {
+        :href => "/tools/vote#idea",
+        :title => "Suggest a new tool we should build",
+        :description => "Have an idea for a tool? Let us know.",
+        :icon => "bg-red bg-opacity-10 ri-file-copy-2-line text-red ri-2x",
+        :cta => "Suggest new tool",
+        :cta_variant => cta_variants[:black],
+      }
+    ].each_with_index do |tool, index|
+  %>
+    <a href="<%= tool[:href] %>" class="flex flex-col items-start justify-start p-4 text-white transition-transform bg-gray-900 rounded-2xl xs:p-6 sm:p-10 group transform-gpu hover:scale-105">
+      <div class="w-12 h-12 mb-4 rounded-full sm:w-16 sm:h-16 xs:mb-6 flex items-center justify-center <%= tool[:icon] || bg_variants[index % 6] %>"></div>
+      <h3 class="mb-4 text-xl font-extrabold leading-tight font-display sm:text-2xl sm:mb-6 lg:mb-8">
+        <%= tool[:title] %>
+      </h3>
+      <p class="mb-6 text-white transition-opacity opacity-80 sm:mb-10 group-hover:opacity-100">
+        <%= tool[:description] %>
+      </p>
+      <span class="flex items-center justify-between w-full px-4 py-2 mt-auto font-semibold transition-colors rounded-md <%= tool[:cta_variant] || cta_variants[:teal] %>">
+        <%= tool[:cta] || "Try it for free" %>
+
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition-all transform opacity-50 group-hover:opacity-100 group-hover:translate-x-1"
+        >
+          <path
+            d="M17.5 9.99996L2.5 9.99996M11.6667 4.16663L17.5 9.99996L11.6667 4.16663ZM17.5 9.99996L11.6667 15.8333L17.5 9.99996Z"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="stroke-current"
+          />
+        </svg>
+      </span>
+    </a>
+  <% end %>
+  </div>
+</div>

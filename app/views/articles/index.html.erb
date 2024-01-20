@@ -1,0 +1,59 @@
+<%- 
+  title "Articles"
+  description "Maybe Articles are your destination for jargon-free, in-depth articles on everything you need to know about personal finance and wealth management."
+  legacy
+-%>
+<div class="relative overflow-hidden">
+  <div class="absolute left-0 right-0 top-1/5 text-teal js-background-swoop">
+    <svg width="632" height="381" viewBox="0 0 632 381" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M-623 371C-555.573 314.412 -368.791 201.237 -161.071 201.237C98.5774 201.237 72.1331 326.458 297.785 326.458C478.307 326.458 574.955 112.153 620 5"
+        stroke-width="24" />
+    </svg>
+  </div>
+
+  <div class="relative z-10 px-4 py-16 mx-auto max-w-7xl sm:px-8">
+    <div class="max-w-3xl mx-auto mb-12 text-center">
+      <h1 class="text-2xl font-extrabold font-display sm:text-4xl">
+        Articles
+      </h1>
+    </div>
+
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+      <% @articles.each_with_index do |article, index| %>
+      <div class="h-full">
+        <%= link_to article_path(article.slug), class: "group block sm:flex sm:flex-col h-full" do %>
+        <% if index % 5 == 0 %>
+        <div class="h-48 mb-6 bg-gradient-to-br from-blue to-teal rounded-xl"></div>
+        <% end %>
+        <% if index % 5 == 1 %>
+        <div class="h-48 mb-6 bg-gradient-to-br from-purple to-pink rounded-xl"></div>
+        <% end %>
+        <% if index % 5 == 2 %>
+        <div class="h-48 mb-6 bg-gradient-to-br from-yellow via-orange to-red rounded-xl"></div>
+        <% end %>
+        <% if index % 5 == 3 %>
+        <div class="h-48 mb-6 bg-gradient-to-br from-purple to-teal rounded-xl"></div>
+        <% end %>
+        <% if index % 5 == 4 %>
+        <div class="h-48 mb-6 bg-gradient-to-br from-red via-lilac to-teal rounded-xl"></div>
+        <% end %>
+
+        <h2 class="mb-6 text-xl font-semibold transition-colors group-hover:text-teal">
+          <%= article.title %>
+        </h2>
+
+        <div class="flex items-center justify-start mt-auto space-x-2">
+          <%=image_tag article.author.profile_image, class: 'w-8 h-8 block rounded-lg', alt: "#{article.author.first_name} #{article.author.last_name} avatar" %>
+
+          <span class="text-sm text-gray-100">
+            <%= article.author.first_name %> <%= article.author.last_name %> •
+            <%= article.published.to_datetime.strftime('%B %e, %Y') %>
+          </span>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

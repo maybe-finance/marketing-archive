@@ -1,0 +1,13 @@
+<%- 
+  title "#{@episode.title} - Ask Maybe Podcast"
+  meta_image "meta-podcast.png"
+  description "Ask Maybe answers your money questions by with our in-house financial advisor and co-founder along with Maybe's own community manager. It pairs perfectly with your commute, workout, or morning coffee ritual."
+  legacy
+-%>
+
+<div id="podcast-episode-app" class="relative overflow-hidden" data-episode="<%= @episode.to_json %>"></div> 
+
+<%= javascript_pack_tag 'podcast' %>
+<%= stylesheet_pack_tag 'podcast', media: 'all' %>
+
+<%= render "partials/get-started" %>

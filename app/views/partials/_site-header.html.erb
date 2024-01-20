@@ -1,0 +1,133 @@
+<header class="relative sticky top-0 z-50" role="banner">
+  <div id="header-background" class="absolute -z-10 inset-0"
+    style="opacity: 0; background: rgba(22, 22, 26, 0.65); backdrop-filter: blur(20px);"></div>
+  <div class="flex items-center justify-between max-w-7xl mx-auto px-4 py-4 sm:px-8 sm:py-6 font-heavy text-base">
+    <%= link_to root_path, class: 'block flex-none' do %>
+    <%= image_tag "logo-mark.svg", class: 'w-10 h-10 block md:hidden', alt: 'Maybe Logo' %>
+    <%= image_tag "logo-white-dark.svg", class: 'w-40 hidden md:block', alt: 'Maybe Logo' %>
+    <% end %>
+    <nav class="flex-grow relative hidden sm:flex justify-center">
+      <ul class="flex space-x-12 text-gray-50">
+        <li>
+          <button
+            class="header-button block px-3 py-1 rounded-lg font-medium hover:text-white hover:bg-gray-800 focus:bg-gray-700 transition-colors duration-75">
+            Product
+          </button>
+          <div class="header-menu absolute pt-5 transition-all duration-75 origin-top">
+            <div class="p-px rounded-2xl bg-gray-700 shadow-lg" style="
+            width: 444px;
+            max-width: 100%;
+            background-image:
+              radial-gradient(farthest-corner at 75% 0%, #ffffff31 0%, transparent 50%);
+        ">
+              <ul class="w-full h-full p-2 rounded-2xl bg-gray-800">
+                <%
+                links = [
+                  { icon: 'ri-pie-chart-2-line', name: 'Track', description: 'Track your assets and debts', href: '/#track' },
+                  { icon: 'ri-chat-poll-line', name: 'Ask my advisor', description: 'Ask a qualified advisor any question', href: '/#ask-my-advisor' },
+                  { icon: 'ri-line-chart-line', name: 'Forecast', description: 'Build plans and run simulations', href: '/#forecast' }
+                ]
+              %>
+
+                <% links.each do |link| %>
+                <li>
+                  <a class="flex items-center space-x-4 px-3 py-2 rounded-xl hover:bg-gray-600 transition-colors duration-75"
+                    href="<%= link[:href] %>">
+                    <i class="<%= link[:icon] %> text-2xl"></i>
+                    <div class="text-base">
+                      <div class="font-medium text-white"><%= link[:name] %></div>
+                      <div class="text-gray-50"><%= link[:description] %></div>
+                    </div>
+                  </a>
+                </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button
+            class="header-button block px-3 py-1 rounded-lg font-medium hover:text-white hover:bg-gray-800 focus:bg-gray-700 transition-colors duration-75">
+            Resources
+          </button>
+          <div class="header-menu absolute pt-5 transition-all duration-75 origin-top">
+            <div class="p-px rounded-2xl bg-gray-700 shadow-lg" style="
+            width: 787px;
+            max-width: 100%;
+            background-image:
+              radial-gradient(farthest-corner at 75% 0%, #ffffff31 0%, transparent 50%);
+        ">
+              <div class="flex gap-4 w-full h-full p-2 rounded-2xl bg-gray-800">
+                <a class="relative w-1/2 py-5 bg-gradient-to-b from-gray-600 to-gray-800 rounded-xl text-base text-white overflow-hidden"
+                  href="/tools">
+                  <ul class="relative flex flex-wrap gap-3 left-1/2 transform -translate-x-1/2" style="width: 700px">
+                    <%
+                    tools = [
+                      { icon: 'ri-bank-line', name: 'Speculator calculator' },
+                      { icon: 'ri-line-chart-line', name: 'Compound interest calculator' },
+                      { icon: 'ri-calculator-line', name: 'FOMO calculator' },
+                      { icon: 'ri-open-arm-line', name: 'Financial freedom calculator' },
+                      { icon: 'ri-bit-coin-line', name: 'Crypto index fund' },
+                      { icon: 'ri-pie-chart-line', name: 'Bogleheads calculator' },
+                    ]
+                  %>
+
+                    <% tools.each do |tool| %>
+                    <li class="flex items-center space-x-2 py-1 px-2.5 bg-gray-500 border border-gray-400 rounded-xl">
+                      <i class="<%= tool[:icon] %> text-2xl"></i>
+                      <span><%= tool[:name] %></span>
+                    </li>
+                    <% end %>
+                  </ul>
+
+                  <div class="mt-6 flex flex-col items-center px-8 text-center">
+                    <span>Try our mini tools</span>
+                    <p class="text-gray-100">
+                      From time to time we build calculators and mini-tools to help you navigate
+                      and visualize your financial journey.
+                    </p>
+                    <span class="mt-6 flex items-center font-medium">
+                      Explore tools <i
+                        class="ri-arrow-right-line ml-2.5 group-hover:ml-3 text-2xl transition-all duration-75"></i>
+                    </span>
+                  </div>
+                </a>
+                <div class="w-1/2 py-6 pr-4">
+                  <%
+                  headingClass = 'ml-3 mb-2 text-sm font-medium'
+                  linkClass = 'inline-block py-1 px-3 rounded-lg font-medium text-gray-50 hover:text-white hover:bg-gray-600 transition-colors duration-75'
+                  %>
+
+                  <div class="<%= headingClass %>">Links</div>
+                  <div class="grid grid-cols-2 gap-y-1">
+                    <div><%= link_to "Security", security_path, class: linkClass %></div>
+                    <div><%= link_to "Blog", articles_path, class: linkClass %></div>
+                    <div><%= link_to "Roadmap", roadmap_path, class: linkClass %></div>
+                    <div><%= link_to "Podcast", podcast_path, class: linkClass %></div>
+                    <div><%= link_to "Community", community_path, class: linkClass %></div>
+                  </div>
+
+                  <div class="mt-7 <%= headingClass %>">Company</div>
+                  <div class="grid grid-cols-2 gap-y-1">
+                    <div><%= link_to "Careers", "https://jobs.maybe.co", class: linkClass %></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <%= link_to "Pricing", pricing_path, class: 'block px-3 py-1 rounded-lg font-medium hover:text-white hover:bg-gray-800 focus:bg-gray-700 transition-colors duration-75' %>
+        </li>
+      </ul>
+    </nav>
+    <div class="flex items-center space-x-3 font-heavy">
+      <%= link_to "https://app.maybe.co/login", class: 'text-white py-2 px-3 rounded-lg bg-transparent hover:bg-gray-700 transition-colors duration-75' do %>
+      Log in
+      <% end %>
+      <%= link_to "https://app.maybe.co/register", class: 'flex items-center py-2 px-3 rounded-lg text-white bg-gray-600 hover:bg-gray-500 transition-colors duration-75' do %>
+      Try for free <i class="ri-arrow-right-line ml-2"></i>
+      <% end %>
+    </div>
+  </div>
+</header>

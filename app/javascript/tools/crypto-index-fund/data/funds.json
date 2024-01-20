@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Blue Chip",
+    "symbols": [
+      "BTC",
+      "ETH",
+      "BNB",
+      "XRP",
+      "SOL",
+      "ADA",
+      "AVAX",
+      "DOT",
+      "DAI"
+    ]
+  },
+  {
+    "name": "Alt Coins",
+    "symbols": [
+      "ETH",
+      "BNB",
+      "XRP",
+      "SOL",
+      "ADA",
+      "AVAX",
+      "DOT",
+      "DAI",
+      "DOGE",
+      "SHIB",
+      "MATIC",
+      "NEAR",
+      "CRO",
+      "TRX",
+      "LTC",
+      "BCH",
+      "LEO",
+      "FTT",
+      "ATOM"
+    ]
+  },
+  {
+    "name": "DeFi Index",
+    "symbols": [
+      "UNI",
+      "AAVE",
+      "MKR",
+      "SNX",
+      "LRC",
+      "COMP",
+      "YFI",
+      "SUSHI",
+      "KNC",
+      "REN",
+      "AVAX",
+      "XTZ",
+      "CRV",
+      "THETA",
+      "CAKE",
+      "FTM",
+      "GRT",
+      "STX",
+      "BAT"
+    ]
+  },
+  {
+    "name": "NFT Index",
+    "symbols": [
+      "MANA",
+      "SAND",
+      "THETA",
+      "XTZ",
+      "CAKE",
+      "GMT",
+      "AXS",
+      "FLOW",
+      "CHZ",
+      "GALA"
+    ]
+  }
+]

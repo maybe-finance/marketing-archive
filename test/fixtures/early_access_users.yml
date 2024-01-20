@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  country: MyString
+  age: MyString
+  interests:
+    - MyString
+  comments: MyText
+  created_at: 2021-03-31 09:44:20
+  updated_at: 2021-03-31 09:44:20
+
+two:
+  email: MyString
+  country: MyString
+  age: MyString
+  interests:
+    - MyString
+  comments: MyText
+  created_at: 2021-03-31 09:44:20
+  updated_at: 2021-03-31 09:44:20

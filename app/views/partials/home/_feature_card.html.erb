@@ -1,0 +1,38 @@
+<!-- prettier-ignore -->
+<div class="w-full h-full rounded-3xl p-px bg-white bg-opacity-10 card-light" style="
+    --mx: 0%;
+    --my: 0%;
+    background-image: radial-gradient(
+      60% 200% at 50% 50%,
+      <%= content_for :feature_card__border_color %>80 0%,
+      transparent 100%
+    );
+  ">
+  <div class="flex flex-col justify-between w-full h-full rounded-3xl bg-black" style="
+      background-image:
+        radial-gradient(
+            100% 100% at clamp(20%, calc(30% + var(--mx) * 0.05), 40%) clamp(50%, calc(50% + var(--my) * 0.05), 60%),
+            <%= content_for :feature_card__color %>33 0%,
+            #16161Af4 120%
+        )
+    ">
+    <div>
+      <%= content_for :feature_card__content %>
+    </div>
+    <div class="px-6 pb-8">
+      <span class="block text-xl text-center text-white">
+        <%= content_for :feature_card__title %>
+      </span>
+      <span class="block mt-1 text-lg text-center text-gray-50">
+        <%= content_for :feature_card__description %>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- prettier-ignore -->
+<%# Flushing %> <% content_for :feature_card__color, '', flush: true %>
+<%# Flushing %> <% content_for :feature_card__border_color, '', flush: true %>
+<%# Flushing %> <% content_for :feature_card__title, '', flush: true %>
+<%# Flushing %> <% content_for :feature_card__description, '', flush: true %>
+<%# Flushing %> <% content_for :feature_card__content, '', flush: true %>

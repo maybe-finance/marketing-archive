@@ -1,0 +1,29 @@
+<%- 
+  title "FOMO Calculator" 
+  meta_image "og-fomo-calculator.png" 
+  description "What if you made a different choice? Maybe you would have gone with AAPL instead of that $100k Supercar? Find out with Maybe's FOMO Calculator."
+  legacy
+-%>
+<div class="relative overflow-hidden">
+  <div class="absolute top-0 left-0 right-0 w-full opacity-10 text-red js-background-swoop">
+    <svg class="" width="1500" height="300" viewBox="0 0 1500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1-50 C500,150 1150,150 1400,-50" fill="none" stroke-linecap="round" stroke-width="24" />
+    </svg>
+  </div>
+
+  <div class="absolute left-0 right-0 w-full top-1/2 opacity-10 text-red js-background-swoop">
+    <svg class="" width="1500" height="500" viewBox="0 0 1500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-50-0 C0,400 800,400 1400,-50" fill="none" stroke-linecap="round" stroke-width="24" />
+    </svg>
+  </div>
+
+  <div id="fomo-calculator-app"></div>
+  <%= javascript_pack_tag 'fomo-calculator' %>
+  <div hidden>
+  <%= form_with model: EarlyAccessUser.new, id: 'early-access-inline-form' do |f| %>
+    <%= f.hidden_field :referrer_id, value: cookies[:referral] if cookies[:referral] %>
+    <%= f.email_field :email, placeholder: 'Enter your email' %>
+    <%= f.submit "Get started" %>
+  <% end %>
+  </div>
+</div> 

@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  external_id: 1
+  title: MyString
+  summary: MyText
+  description: MyText
+  image_url: MyString
+  formatted_published_at: MyString
+  formatted_duration: MyString
+  embed_html_player: MyText
+  external_updated_at: 2022-05-20 14:22:04
+  slug: 1-my-string
+
+two:
+  number: 2
+  external_id: 2
+  title: MyString
+  summary: MyText
+  description: MyText
+  image_url: MyString
+  formatted_published_at: MyString
+  formatted_duration: MyString
+  embed_html_player: MyText
+  external_updated_at: 2022-05-20 14:22:04
+  slug: 2-my-string

@@ -1,0 +1,9 @@
+#podcast-episode-description a {
+  color: #1de4fc;
+}
+
+#podcast-episode-description ul {
+  list-style-type: disc;
+  color: #1de4fc;
+  margin-left: 20px;
+}

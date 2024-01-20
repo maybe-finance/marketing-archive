@@ -1,0 +1,19 @@
+<%- 
+  title "Crypto Index Fund"
+  description "Simulate investments in a wide range of crypto themes (DeFi, NFTs, Blue Chip) using a selection of premade crypto index funds"
+  meta_image "og-crypto-index-fund.png"
+  legacy
+-%>
+
+<div class="absolute top-0 right-0 text-purple js-background-swoop" data-direction="rtl">
+  <svg width="1440" height="300" viewBox="0 0 1440 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path opacity="0.2" d="M1532 -126C1453.5 -8.5 1210.21 287.5 942.5 287.5C607.86 287.5 583.325 53 292.5 53C59.8403 53 -70.5 271 -70.5 271" stroke="url(#paint0_linear_4410_166)" stroke-width="24"/>
+  </svg>
+</div>
+
+<div id="crypto-index-fund-app" class="relative"></div>
+
+<%= javascript_pack_tag 'crypto-index-fund' %>
+<%= stylesheet_pack_tag 'crypto-index-fund', media: 'all' %>
+
+<%= render "partials/get-started" %>

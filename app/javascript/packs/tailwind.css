@@ -1,0 +1,240 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 100;
+  src: url("../../assets/fonts/monument/MonumentExtended-Thin.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 200;
+  src: url("../../assets/fonts/monument/MonumentExtended-Light.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 300;
+  src: url("../../assets/fonts/monument/MonumentExtended-Book.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 400;
+  src: url("../../assets/fonts/monument/MonumentExtended-Regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 500;
+  src: url("../../assets/fonts/monument/MonumentExtended-Medium.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 700;
+  src: url("../../assets/fonts/monument/MonumentExtended-Bold.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 800;
+  src: url("../../assets/fonts/monument/MonumentExtended-Black.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 900;
+  src: url("../../assets/fonts/monument/MonumentExtended-Heavy.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/inter/Inter-Variable.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+}
+
+::selection {
+  @apply text-white bg-pink;
+}
+
+body.dragging,
+body.dragging * {
+  cursor: grabbing !important;
+}
+
+@layer utilities {
+  .highlight {
+    background-image: linear-gradient(90deg, #fcc419, #fcc419);
+    background-position-y: 80%;
+    background-size: 100% 8px;
+    background-repeat: no-repeat;
+  }
+  @screen sm {
+    .highlight {
+      background-size: 100% 10px;
+    }
+  }
+
+  @variants hover, focus {
+    .gradient-bottom-border {
+      background-image: linear-gradient(
+        to right,
+        #f06595,
+        #7209b7,
+        #6d07b0,
+        #4361ee,
+        #52edff
+      );
+      background-repeat: no-repeat;
+      background-size: 100% 3px;
+      background-position: 0 bottom;
+    }
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+  }
+}
+
+@layer components {
+  .text-content p,
+  .text-content ul,
+  .text-content ol {
+    @apply mb-6 text-lg;
+  }
+
+  .text-content h2 {
+    @apply mt-10 font-sans text-3xl font-semibold;
+  }
+
+  .text-content h3 {
+    @apply mt-8 font-sans text-2xl font-semibold;
+  }
+
+  .text-content h4 {
+    @apply font-sans text-lg font-semibold;
+  }
+
+  .text-content ul {
+    @apply pl-8 list-disc;
+  }
+
+  .text-content li {
+    @apply mb-3;
+  }
+
+  .text-content ol {
+    @apply pl-8 list-decimal;
+  }
+
+  .text-content strong {
+    @apply font-semibold;
+  }
+
+  .text-content a {
+    @apply font-medium underline text-teal hover:no-underline;
+  }
+
+  .text-content blockquote {
+    background: linear-gradient(180deg, #24323a 0%, #19181d 100%),
+      linear-gradient(180deg, #1e1d23 0%, #1e1d23 100%);
+    @apply mx-0 my-8 px-10 md:px-20 py-12 rounded-3xl text-center lg:-mx-20;
+  }
+
+  /* For dictionary, we don't want blockquote to extend over the container as we have for articles */
+  .text-content.contained-blockquote blockquote {
+    @apply lg:mx-0;
+  }
+
+  .text-content blockquote::before {
+    content: url("data:image/svg+xml,%3Csvg width='38' height='24' viewBox='0 0 38 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.786 14.6356C20.786 20.2349 23.7787 24 28.9919 24C33.1431 24 36.0393 21.3934 36.0393 17.6283C36.0393 13.5737 32.2743 10.4844 27.5438 11.9325C28.4127 7.68471 32.3708 5.07812 37.6805 5.2712V0.0580246C28.0265 -0.714293 20.786 6.33314 20.786 14.6356ZM0.319458 14.6356C0.319458 20.2349 3.31221 24 8.52538 24C12.6766 24 15.6694 21.3934 15.6694 17.6283C15.6694 13.5737 11.8077 10.4844 7.17381 11.9325C7.94613 7.68471 11.9043 5.07812 17.3105 5.2712V0.0580246C7.55997 -0.714293 0.319458 6.33314 0.319458 14.6356Z' fill='%2352EDFF'/%3E%3C/svg%3E");
+    @apply text-teal;
+  }
+
+  .text-content blockquote p:first-child {
+    @apply mt-14;
+  }
+
+  .text-content blockquote p {
+    @apply mt-7 text-white font-sans font-semibold text-2xl mb-0;
+  }
+
+  .text-content blockquote p:only-child {
+    @apply mb-8;
+  }
+
+  .text-content blockquote p:not(:first-child) strong {
+    @apply block text-teal font-sans font-semibold text-xl;
+  }
+
+  .inline-form-input-wrapper {
+    @apply relative flex flex-col items-stretch justify-between w-full p-1 bg-black border-2 border-white rounded-xl border-opacity-10 sm:flex-row;
+  }
+
+  @variants focus-within {
+    .inline-form-input-wrapper-gradient {
+      border: 2px solid transparent;
+      background-image: linear-gradient(#2c2a32, #2c2a32),
+        linear-gradient(to right, #f72585, #7209b7, #3a0ca3, #4361ee, #b7f9f9);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gradient-heading {
+  background-image: linear-gradient(to bottom, #f8f9fa 50%, #868e96 86.61%);
+  background-clip: text;
+  color: transparent;
+}
+
+/* .header-button/.header-menu classes can be replaced with peer classes if we get Tailwind JIT in place */
+.header-menu {
+  pointer-events: none;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) scale(95%);
+}
+
+.header-button:hover ~ .header-menu,
+.header-menu:hover {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateX(-50%) scale(100%);
+}
+
+/* .tab-input/.tab classes can be replaced with peer classes if we get Tailwind JIT in place */
+.tab-input:checked ~ .tab {
+  @apply text-white;
+  box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(
+    229.03deg,
+    rgba(248, 249, 250, 0.16) 25.77%,
+    rgba(134, 142, 150, 0.16) 73.24%
+  );
+}

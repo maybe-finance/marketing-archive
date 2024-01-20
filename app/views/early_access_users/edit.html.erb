@@ -1,0 +1,21 @@
+<div class="relative overflow-hidden">
+  <div class="absolute left-0 right-0 z-0 top-1/4 text-blue js-background-swoop">
+    <svg width="1429" height="400" viewBox="0 0 1429 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-306 389C-212.482 329.784 46.5801 211.351 334.68 211.351C694.804 211.351 658.127 342.389 971.099 342.389C1221.48 342.389 1355.52 118.13 1418 6" stroke-width="24"/>
+    </svg>
+  </div>
+
+  <div class="relative z-10 px-4 py-16 mx-auto max-w-7xl sm:px-8">
+    <%= render "early_access_users/form/header" %>
+    
+    <% if @user.errors.any? %>
+      <ul class="max-w-xl p-4 mx-auto text-white space-y-2 rounded-2xl bg-red">
+        <% @user.errors.full_messages.each do |message|%>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= render "early_access_users/form/create-form" %>
+  </div>
+</div>
