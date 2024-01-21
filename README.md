@@ -52,8 +52,6 @@ yarn test:integration
 Signup for an account on twelvedata.com and export your api key:
 
 ```
-export TWELVE_DATA_API_KEY=your-api-key
-export ALPHA_VANTAGE_API_KEY=your-api-key
 rake equity_prices:sync
 ```
 
@@ -64,7 +62,6 @@ GET /api/equity_prices/BTCUSD
 Signup for an account on coinmarketcap.com/api and export your api key:
 
 ```
-export COIN_MARKET_CAP_API_KEY=your-api-key
 rake market_cap:sync
 ```
 
