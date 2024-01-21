@@ -39,7 +39,7 @@
     <meta name="ENV_API_URL" content="<%= ENV.fetch('API_URL') { 'http://localhost:3000/api' } %>" />
   </head>
   <body class="font-sans antialiased font-normal leading-normal text-white bg-black user-select-pink">
-    <%= render 'partials/legacy-page-banner' if content_for?(:legacy) %>
+    <%= render 'partials/legacy-page-banner' %>
     <%= render 'partials/site-header' %>
     <%= yield %>
     <% #TODO: Bring Low Hanging Fruit Checklist up to par with newer tools and add in footer %>

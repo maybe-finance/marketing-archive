@@ -40,9 +40,8 @@ Rails.application.routes.draw do
   get 'security', to: 'pages#security'
   get 'pricing', to: 'pages#pricing'
   
-  get 'podcast', to: 'podcast#index'
-  get 'podcast/:slug', to: 'podcast#show'
-  post 'podcast/webhook', to: 'podcast#webhook'
+  get '/podcast', to: redirect('/')
+  get '/podcast/*path', to: redirect('/')
 
   get 'dictionary', to: 'dictionary#index'
   get 'dictionary/:slug', to: 'dictionary#show'

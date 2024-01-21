@@ -23,6 +23,6 @@ class PagesController < ApplicationController
   def ask; end
 
   def community
-    redirect_to 'https://community.maybe.co'
+    #redirect_to 'https://community.maybe.co'
   end
 end

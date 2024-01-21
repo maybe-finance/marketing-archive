@@ -1,6 +1,7 @@
 ![home](https://github.com/maybe-finance/marketing/assets/35243/e899e0a0-7d77-495e-b8d1-f189d097f87b)
 
 # Maybe Marketing Site
+
 This is the repo for the former (and hopefully soon to be "present") marketing site for Maybe, an OSS personal finance and wealth management platform.
 
 The marketing site was home to a half dozen financial mini-tools and dozens of in-depth articles on personal finance.
@@ -104,23 +105,8 @@ Include the symbol in the **TwelveDataEquityImporter** (`app/services/twelve_dat
 
 Include the symbol in the **CoinMarketCapImporter** (`app/services/coin_market_cap_importer.rb`)
 
-## Podcast
-
-Podcast episodes come from [Transistor.fm](https://transistor.fm/).
-
-There is a task (`podcast:sync`) scheduled to run daily that syncs episodes with Transistor.fm.
-
-This task will check for all episodes `published` and update the database if there is any change (ex. `episode description`).
-
-When a new episode is `published`, a webhook is send by Transistor.fm and received in the `/podcast/webhook` endpoint.
-This will call a job (`PodcastSyncJob`) that will update the episodes, exactly the same as running the `podcast:sync` task.
-
-To manually sync the episodes, execute the following command:
-
-```
-TRANSISTOR_API_KEY=transistor-api-key rake podcast:sync
-```
 ---
+
 ## Credits
 
 The original marketing site had nearly a dozen contributors! Massive thanks to [@pieterbeulque](https://github.com/pieterbeulque), [@zachgoll](https://github.com/zachgoll), [@TWilson023](https://github.com/TWilson023), [@benface](https://github.com/benface), [@sauloantuness](https://github.com/sauloantuness), [@ffiller](https://github.com/ffiller), [@Tobolka](https://github.com/Tobolka), [@jaobrown](https://github.com/jaobrown), [@justinfar](https://github.com/justinfar), [@marcqualie](https://github.com/marcqualie) and [@narciero](https://github.com/narciero)!
