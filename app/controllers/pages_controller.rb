@@ -1,13 +1,9 @@
 class PagesController < ApplicationController
   def home; end
 
-  def privacy
-    @page = ButterCMS::Page.get('*', 'privacy-policy').data
-  end
+  def privacy; end
 
-  def terms
-    @page = ButterCMS::Page.get('*', 'terms-of-service').data
-  end
+  def terms; end
 
   def roadmap
   end
