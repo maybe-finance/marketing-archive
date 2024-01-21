@@ -37,16 +37,6 @@
     <meta name="msapplication-TileColor" content="#1d1b23">
     <meta name="theme-color" content="#1d1b23">
     <meta name="ENV_API_URL" content="<%= ENV.fetch('API_URL') { 'http://localhost:3000/api' } %>" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR92N47NMZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-JR92N47NMZ');
-      gtag('config', 'UA-231549931-1');
-    </script>
   </head>
   <body class="font-sans antialiased font-normal leading-normal text-white bg-black user-select-pink">
     <%= render 'partials/legacy-page-banner' if content_for?(:legacy) %>
@@ -54,16 +44,5 @@
     <%= yield %>
     <% #TODO: Bring Low Hanging Fruit Checklist up to par with newer tools and add in footer %>
     <%= render 'partials/site-footer' unless controller.controller_name == "tools" and params[:action] == "low_hanging_fruit_checklist" %>
-
-    <script>
-      window.intercomSettings = {
-        api_base: "https://api-iam.intercom.io",
-        app_id: "r9ptie9f"
-      };
-    </script>
-
-    <script>
-    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/r9ptie9f';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-    </script>
   </body>
 </html>

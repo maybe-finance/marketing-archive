@@ -1,6 +1,6 @@
-<section class="relative overflow-hidden pt-24 -mt-24 pb-8 sm:pb-22 px-8 md:px-0">
-  <div class="mt-18 relative flex flex-col items-center z-10 mx-auto max-w-7xl text-center">
-    <h1 class="font-display text-4xl md:text-5xl font-semibold">
+<section class="relative px-8 pt-24 pb-8 -mt-24 overflow-hidden sm:pb-22 md:px-0">
+  <div class="relative z-10 flex flex-col items-center mx-auto text-center mt-18 max-w-7xl">
+    <h1 class="text-4xl font-semibold font-display md:text-5xl">
       <span class="gradient-heading">Your</span>
       <span class="gradient-heading">financial</span>
       <span class="gradient-heading">future,</span>
@@ -11,19 +11,18 @@
     </h1>
 
     <p class="mt-1 text-lg sm:max-w-xl text-gray-50">
-      Track all your accounts in one place, simulate scenarios, get advice from qualified financial advisors, and much
-      more
+      Maybe gives you all the tools you need to manage your money and grow your wealth!
     </p>
 
     <a href="https://app.maybe.co/register"
-      class="mt-7 py-2 px-4 font-medium text-base text-black bg-white hover:bg-gray-25 rounded-lg transition-colors duration-50">
+      class="px-4 py-2 text-base font-medium text-black transition-colors bg-white rounded-lg mt-7 hover:bg-gray-25 duration-50">
       Get Started
     </a>
   </div>
 
-  <div class="relative w-full -my-52 sm:-my-32 md:-my-16 flex justify-center items-center" style="height: 900px">
+  <div class="relative flex items-center justify-center w-full -my-52 sm:-my-32 md:-my-16" style="height: 900px">
     <div class="relative">
-      <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none"
+      <div class="absolute transform -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none left-1/2 top-1/2"
         style="
           width: 185.2%;
           height: 194.5%;
@@ -66,14 +65,14 @@
         "></div>
 
         <!-- Bottom left light -->
-        <div class="absolute top-full transform -translate-y-1/2" style="
+        <div class="absolute transform -translate-y-1/2 top-full" style="
           left: -10%;
           width: 69%;
           height: 27%;
           background-image: radial-gradient(50% 50% at calc(40% - var(--mx) * 10%) 50%, #F1298022, transparent 75%);
         "></div>
       </div>
-      <div class="absolute z-40 w-full hidden md:block select-none pointer-events-none"
+      <div class="absolute z-40 hidden w-full pointer-events-none select-none md:block"
         style="right: -300px; top: -550px; height: 650px">
         <div class="absolute inset-0" style="
             background-image: conic-gradient(
@@ -136,17 +135,17 @@
 </section>
 
 <!-- Track everything, all in one place -->
-<section id="track" class="relative sm:mx-4 px-px pt-px rounded-t-4xl overflow-hidden" style="
+<section id="track" class="relative px-px pt-px overflow-hidden sm:mx-4 rounded-t-4xl" style="
     background-image: linear-gradient(180deg, #fff1 0%, transparent 100%),
       radial-gradient(farthest-corner at 65% 0%, #fff4 0%, transparent 50%);
   ">
-  <div class="relative pt-22 pb-11 px-8 rounded-t-4xl overflow-hidden bg-black">
-    <div class="absolute top-0 left-1/2 transform -translate-x-1/2">
+  <div class="relative px-8 overflow-hidden bg-black pt-22 pb-11 rounded-t-4xl">
+    <div class="absolute top-0 transform -translate-x-1/2 left-1/2">
       <%= render partial: "partials/home/track_everything/bg" %>
     </div>
     <div class="absolute inset-0" style="box-shadow: inset 0 0 100px 100px #16161a"></div>
     <div class="relative text-center">
-      <h2 class="font-display text-3xl md:text-4xl font-semibold">
+      <h2 class="text-3xl font-semibold font-display md:text-4xl">
         <span class="gradient-heading">Track</span>
         <span class="gradient-heading">everything,</span>
         <br class="hidden sm:inline" />
@@ -155,76 +154,49 @@
         <span class="gradient-heading">one</span>
         <span class="gradient-heading">place</span>
       </h2>
-      <p class="mt-1 text-lg sm:max-w-xl mx-auto text-gray-50">
+      <p class="mx-auto mt-1 text-lg sm:max-w-xl text-gray-50">
         Stop wrangling custom sheets and jumping between browser tabs.
         Maybe brings all of your accounts under one roof, automatically.
       </p>
-      <div class="mt-64 pt-32">
+      <div class="pt-32 mt-64">
         <%= render partial: "partials/home/track_everything/features" %>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Ask an advisor - Yes, a real one -->
-<section id="ask-my-advisor" class="relative sm:mx-4 py-11 px-8 overflow-hidden">
-  <div class="absolute -z-10 top-0 left-1/2 transform -translate-x-1/2">
-    <%= render partial: "partials/home/ask_my_advisor/bg" %>
-  </div>
-  <div class="absolute inset-0 shadow-edge-sm md:shadow-edge-md lg:shadow-edge-lg"></div>
-  <div class="relative text-center">
-    <h2 class="font-display text-3xl md:text-4xl font-semibold">
-      <span class="gradient-heading">Ask</span>
-      <span class="gradient-heading">an</span>
-      <span class="gradient-heading">advisor.</span>
-      <br class="hidden sm:inline" />
-      <span class="gradient-heading">Yes,</span>
-      <span class="gradient-heading">a</span>
-      <span class="gradient-heading">real</span>
-      <span class="gradient-heading">one.</span>
-    </h2>
-    <p class="mt-1 text-lg sm:max-w-xl mx-auto text-gray-50">
-      No video calls, no calendar invites, just ask any question on your own time and get it answered by qualified
-      professionals.
-    </p>
-    <div class="mt-64 pt-32">
-      <%= render partial: "partials/home/ask_my_advisor/features" %>
-    </div>
-  </div>
-</section>
-
 <!-- Simulate your financial maybes -->
-<section id="forecast" class="relative sm:mx-4 py-11 px-8 overflow-hidden">
-  <div class="absolute -z-10 left-1/2 transform -translate-x-1/2">
+<section id="forecast" class="relative px-8 overflow-hidden sm:mx-4 py-11">
+  <div class="absolute transform -translate-x-1/2 -z-10 left-1/2">
     <%= render partial: "partials/home/simulate_maybes/bg" %>
   </div>
   <div class="absolute inset-0" style="box-shadow: inset 0 0 75px 100px #16161a"></div>
   <div class="relative text-center">
-    <h2 class="font-display text-3xl md:text-4xl font-semibold">
+    <h2 class="text-3xl font-semibold font-display md:text-4xl">
       <span class="gradient-heading">Simulate</span>
       <span class="gradient-heading">your</span>
       <br class="hidden sm:inline" />
       <span class="gradient-heading">financial</span>
       <span class="gradient-heading">maybes</span>
     </h2>
-    <p class="mt-1 text-lg sm:max-w-xl mx-auto text-gray-50">
+    <p class="mx-auto mt-1 text-lg sm:max-w-xl text-gray-50">
       Run simulations to visualize different milestones like reaching financial independence, starting a business or
       buying your first home.
     </p>
-    <div class="mt-64 pt-32">
+    <div class="pt-32 mt-64">
       <%= render partial: "partials/home/simulate_maybes/features" %>
     </div>
   </div>
 </section>
 
 <!-- A few more things you may want to know -->
-<section class="relative sm:mx-4 pt-11 pb-23 px-8 overflow-hidden">
-  <div class="absolute -z-10 top-0 left-1/2 transform -translate-x-1/2">
+<section class="relative px-8 overflow-hidden sm:mx-4 pt-11 pb-23">
+  <div class="absolute top-0 transform -translate-x-1/2 -z-10 left-1/2">
     <%= render partial: "partials/home/few_more_things/bg" %>
   </div>
   <div class="absolute inset-0" style="box-shadow: inset 0 0 100px 100px #16161a"></div>
   <div class="relative text-center">
-    <h2 class="font-display text-3xl md:text-4xl font-semibold">
+    <h2 class="text-3xl font-semibold font-display md:text-4xl">
       <span class="gradient-heading">A</span>
       <span class="gradient-heading">few</span>
       <span class="gradient-heading">more</span>
@@ -236,7 +208,7 @@
       <span class="gradient-heading">to</span>
       <span class="gradient-heading">know</span>
     </h2>
-    <p class="mt-1 text-lg sm:max-w-xl mx-auto text-gray-50">
+    <p class="mx-auto mt-1 text-lg sm:max-w-xl text-gray-50">
       Security, community and transparency are things we value. Instead of just mentioning them, here’s how we’re
       putting them to action.
     </p>
@@ -247,11 +219,11 @@
 </section>
 
 <!-- Get started CTA -->
-<section class="relative sm:mx-4 px-px pb-px rounded-b-4xl overflow-hidden" style="
+<section class="relative px-px pb-px overflow-hidden sm:mx-4 rounded-b-4xl" style="
     background-image: linear-gradient(0deg, #fff1 0%, transparent 100%),
       radial-gradient(farthest-corner at 50% 100%, #fff4 0%, transparent 50%);
   ">
-  <div class="relative rounded-b-4xl overflow-hidden bg-black">
+  <div class="relative overflow-hidden bg-black rounded-b-4xl">
     <%= render "partials/get-started" %>
   </div>
 </section>

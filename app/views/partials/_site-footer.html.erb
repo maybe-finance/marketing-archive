@@ -21,9 +21,6 @@
             <%= link_to "Security", security_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
           </li>
           <li>
-            <%= link_to "Jobs", "https://jobs.maybe.co", class: 'opacity-70 transition-opacity hover:opacity-100' %>
-          </li>
-          <li>
             <%= link_to "Articles", articles_path, class: 'opacity-70 transition-opacity hover:opacity-100' %>
           </li>
           <li>
@@ -56,11 +53,6 @@
             </a>
           </li>
           <li>
-            <a href="/#ask-my-advisor" class="transition-opacity opacity-70 hover:opacity-100">
-              Ask My Advisor
-            </a>
-          </li>
-          <li>
             <a href="/#forecast" class="transition-opacity opacity-70 hover:opacity-100">
               Forecast
             </a>
@@ -90,7 +82,7 @@
             </a>
           </li>
           <li>
-            <a href="https://discord.gg/maybefinance" class="transition-opacity opacity-70 hover:opacity-100">
+            <a href="https://link.maybe.co/discord" class="transition-opacity opacity-70 hover:opacity-100">
               Discord
             </a>
           </li>
@@ -167,12 +159,10 @@
 
   <div class="flex flex-wrap gap-4 md:flex-nowrap">
     <div class="space-y-2 text-sm text-gray-100">
-      <p>&copy; 2023 Maybe Finance, Inc. &bull; <a href="mailto:support@maybe.co" class="underline">support@maybe.co</a></p>
-      <p>Advisory services offered through Maybe Finance, Inc., a Registered Investment Advisor.
-<br>Investing involves risk; you may lose money. Past performance is no guarantee of future results.</p>
+      <p>&copy; <%= Time.now.year %> Maybe Finance, Inc. &bull; <a href="mailto:support@maybe.co" class="underline">support@maybe.co</a></p>
     </div>
     <div class="flex justify-start flex-grow flex-shrink-0 space-x-4 md:justify-end">
-      <a href="https://discord.gg/maybefinance" target="_blank">
+      <a href="https://link.maybe.co/discord" target="_blank">
         <i class="text-3xl ri-discord-fill hover:text-twitter"></i>
       </a>
       <a href="https://www.linkedin.com/company/maybe" target="_blank">
