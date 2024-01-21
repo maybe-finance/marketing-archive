@@ -44,11 +44,9 @@
         </h2>
 
         <div class="flex items-center justify-start mt-auto space-x-2">
-          <%=image_tag article.author.profile_image, class: 'w-8 h-8 block rounded-lg', alt: "#{article.author.first_name} #{article.author.last_name} avatar" %>
-
           <span class="text-sm text-gray-100">
-            <%= article.author.first_name %> <%= article.author.last_name %> •
-            <%= article.published.to_datetime.strftime('%B %e, %Y') %>
+            <%= article.author_name %> &bull;
+            <%= article.publish_at.to_datetime.strftime('%B %e, %Y') %>
           </span>
         </div>
         <% end %>

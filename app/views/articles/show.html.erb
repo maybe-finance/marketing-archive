@@ -19,32 +19,30 @@
       </h1>
 
       <p class="text-gray-100">
-        <time class="dt-published" datetime="<%= @article.published.to_datetime.iso8601 %>">
-          <%= @article.published.to_datetime.strftime('%B %e, %Y') %>
-        </time> by <a href="https://twitter.com/<%= @article.author.twitter_handle %>" rel="noopener"
-          class="p-author"><%= @article.author.first_name %> <%= @article.author.last_name %></a>
+        <time class="dt-published" datetime="<%= @article.publish_at.to_datetime.iso8601 %>">
+          <%= @article.publish_at.to_datetime.strftime('%B %e, %Y') %>
+        </time> by <a href="https://twitter.com/<%= @article.author_twitter %>" rel="noopener"
+          class="p-author"><%= @article.author_name %></a>
       </p>
     </div>
     <div class="e-content text-content">
-      <%= @article.body.html_safe %>
+      <%= markdown @article.body %>
     </div>
   </div>
 
   <div class="p-4 mx-auto max-w-7xl sm:px-8">
     <footer
       class="items-center max-w-xl p-6 mx-auto space-y-4 bg-gray-900 md:max-w-2xl md:p-10 rounded-2xl sm:flex sm:space-y-0 sm:space-x-6">
-      <%= image_tag @article.author.profile_image, class: 'w-16 h-16 sm:w-24 sm:h-24 block rounded-xl', alt: "#{@article.author.first_name} #{@article.author.last_name} avatar" %>
-
       <div class="space-y-4 text-sm sm:text-base">
         <p>
-          <strong><%= @article.author.first_name %> <%= @article.author.last_name %> wrote this.</strong> Got something
+          <strong><%= @article.author_name %> wrote this.</strong> Got something
           to add? Continue the conversation on Twitter!
         </p>
 
-        <a href="https://twitter.com/intent/tweet?screen_name=<%= @article.author.twitter_handle %>&ref_src=twsrc%5Etfw"
+        <a href="https://twitter.com/intent/tweet?screen_name=<%= @article.author_twitter %>&ref_src=twsrc%5Etfw"
           class="twitter-mention-button" data-show-count="true" data-size="large"
-          data-url="<%= article_url(@article.slug) %>" data-related="<%= @article.author.twitter_handle %>">
-          Tweet to @<%= @article.author.twitter_handle %>
+          data-url="<%= article_url(@article.slug) %>" data-related="<%= @article.author_twitter %>">
+          Tweet to @<%= @article.author_twitter %>
         </a>
 
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
