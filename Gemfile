@@ -17,8 +17,8 @@ gem 'sass-rails', '>= 6'
 gem 'sprockets', '3.7.2'
 gem 'webpacker', '~> 5.0'
 gem 'rack-rewrite'
-gem 'buttercms-rails'
 gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+gem 'reverse_markdown'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

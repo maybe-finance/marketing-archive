@@ -1,4 +1,4 @@
-<div class="bg-gray-900 rounded-2xl p-6 sm:p-8 md:p-10 h-full">
+<div class="h-full p-6 bg-gray-900 rounded-2xl sm:p-8 md:p-10">
   <div class="flex space-x-2 text-gray-400">
     <a href="/dictionary" class="hover:underline">
       Financial Dictionary
@@ -9,9 +9,9 @@
     </span>
   </div>
 
-  <div class="flex justify-between items-start mt-4 sm:mt-8 space-x-2">
+  <div class="flex items-start justify-between mt-4 space-x-2 sm:mt-8">
     <div class="flex flex-col space-y-2">
-      <div class="text-white text-xl sm:text-3xl font-display font-black group-hover:underline">
+      <div class="text-xl font-black text-white sm:text-3xl font-display group-hover:underline">
         <%= @term[:term] %>
       </div>
     </div>
@@ -19,7 +19,7 @@
 
   <div class="mt-8">
     <div class="text-content contained-blockquote">
-      <%= @term[:definition].html_safe %>
+      <%= markdown @term[:definition] %>
     </div>
   </div>
 </div>
