@@ -38,30 +38,29 @@ import Results from "./Results";
 import { ChartData } from "./ResultsChart";
 import EarlyAccessFooter from "../../components/EarlyAccessFooter";
 import Confetti, { Particle } from "../../components/Confetti";
-import { FeedbackWidget } from "../../components/feedback-widget";
 
 type FundStateReducerAction =
   | {
-      type: "resetFunds";
-    }
+    type: "resetFunds";
+  }
   | {
-      fundType: FundType;
-      type: "setFund";
-      fund: SelectableOption;
-    }
+    fundType: FundType;
+    type: "setFund";
+    fund: SelectableOption;
+  }
   | {
-      fundType: FundType;
-      type: "setAllocationPercentage";
-      allocationPercentage: number;
-    }
+    fundType: FundType;
+    type: "setAllocationPercentage";
+    allocationPercentage: number;
+  }
   | {
-      fundType: FundType;
-      type: "submitAllocationPercentage";
-    }
+    fundType: FundType;
+    type: "submitAllocationPercentage";
+  }
   | {
-      fundType: FundType;
-      type: "toggleLocked";
-    };
+    fundType: FundType;
+    type: "toggleLocked";
+  };
 
 const fundStateReducer = function (
   state: FundState,
@@ -70,8 +69,8 @@ const fundStateReducer = function (
   const otherFundTypes =
     action.type !== "resetFunds"
       ? Object.values(FundType).filter(
-          (fundType) => fundType !== action.fundType
-        )
+        (fundType) => fundType !== action.fundType
+      )
       : [];
   const stateOfOtherFunds = pick(state, otherFundTypes);
   switch (action.type) {
@@ -133,7 +132,7 @@ const fundStateReducer = function (
               allocationPercentage = Math.floor(
                 (stateOfOtherFund.submittedAllocationPercentage /
                   unlockedSubmittedAllocationPercentage) *
-                  allocationPercentageToDistribute
+                allocationPercentageToDistribute
               );
             }
             allocationPercentageDistributed += allocationPercentage;
@@ -233,7 +232,7 @@ export default function Home(): JSX.Element {
   const [isGreatResult, setIsGreatResult] = useState(false);
 
   return (
-    <div className="px-4 sm:px-8 overflow-hidden">
+    <div className="px-4 overflow-hidden sm:px-8">
       <ToolHeader
         title="Bogleheads Growth Calculator"
         description={`Find out what three-fund portfolio could give you the best returns over the past ${SPAN_IN_YEARS} years.`}
@@ -247,7 +246,7 @@ export default function Home(): JSX.Element {
               layout={true}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="z-10 relative p-6 md:p-12 rounded-lg md:rounded-2xl bg-gray-900"
+              className="relative z-10 p-6 bg-gray-900 rounded-lg md:p-12 md:rounded-2xl"
             >
               <div
                 className={classNames(
@@ -257,7 +256,7 @@ export default function Home(): JSX.Element {
               />
               <motion.form
                 layout={true}
-                className="z-10 relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6"
+                className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6"
                 onSubmit={(e) => e.preventDefault()}
               >
                 <div>
@@ -281,7 +280,7 @@ export default function Home(): JSX.Element {
                       />
                     }
                   />
-                  <div className="mt-6 flex lg:items-center h-12 px-3">
+                  <div className="flex h-12 px-3 mt-6 lg:items-center">
                     <div className="flex-1">
                       <Slider
                         variant={SliderVariant.Teal}
@@ -368,7 +367,7 @@ export default function Home(): JSX.Element {
                       />
                     }
                   />
-                  <div className="mt-6 flex lg:items-center h-12 px-3">
+                  <div className="flex h-12 px-3 mt-6 lg:items-center">
                     <div className="flex-1">
                       <Slider
                         variant={SliderVariant.Blue}
@@ -464,7 +463,7 @@ export default function Home(): JSX.Element {
                       />
                     }
                   />
-                  <div className="mt-6 flex lg:items-center h-12 px-3">
+                  <div className="flex h-12 px-3 mt-6 lg:items-center">
                     <div className="flex-1">
                       <Slider
                         variant={SliderVariant.Purple}
@@ -552,7 +551,7 @@ export default function Home(): JSX.Element {
                         Calculate
                       </Button>
                     ) : (
-                      <div className="flex lg:items-center h-12 px-3">
+                      <div className="flex h-12 px-3 lg:items-center">
                         <div className="flex-1">
                           <Slider
                             variant={SliderVariant.White}
@@ -591,10 +590,10 @@ export default function Home(): JSX.Element {
                           setIsChartVisible(true);
                           setIsGreatResult(
                             chartData.percentageReturn >=
-                              GREAT_RESULT_MIN_PERCENTAGE_RETURN &&
-                              GREAT_RESULT_RISK_LEVELS.includes(
-                                chartData.riskLevel
-                              )
+                            GREAT_RESULT_MIN_PERCENTAGE_RETURN &&
+                            GREAT_RESULT_RISK_LEVELS.includes(
+                              chartData.riskLevel
+                            )
                           );
                         }}
                         onResetFunds={() => {
@@ -617,7 +616,7 @@ export default function Home(): JSX.Element {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0, height: 0, y: -260, scale: 0.95 }}
                 >
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-10">
+                  <div className="grid grid-cols-1 gap-8 pt-10 lg:grid-cols-3">
                     <TipCard
                       title="Diversified"
                       icon={<BranchIcon className="bg-orange text-orange" />}
@@ -689,7 +688,7 @@ export default function Home(): JSX.Element {
         />
       )}
 
-      {isChartVisible && <FeedbackWidget />}
+      {isChartVisible}
     </div>
   );
 }

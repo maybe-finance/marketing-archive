@@ -15,7 +15,6 @@ import ScreenPersonalInfo from "./components/screen-personal-info";
 import ScreenFinancialInfo from "./components/screen-financial-info";
 import ScreenConfirm from "./components/screen-confirm";
 import ScreenLoading from "./components/screen-loading";
-import FeedbackWidget from "../../../../components/feedback-widget/FeedbackWidget";
 
 export default function MultiStepForm(): JSX.Element | null {
   const [state, send, service] = useMachine(MultiStepFormMachine);
@@ -54,7 +53,6 @@ export default function MultiStepForm(): JSX.Element | null {
       ) : state.matches(MultiStepFormState.RESULTS) ? (
         <>
           <ScreenResults service={service} />
-          <FeedbackWidget></FeedbackWidget>
         </>
       ) : null}
     </>

@@ -13,7 +13,6 @@ import {
 import EarlyAccessFooter from "../../components/EarlyAccessFooter";
 import Tips from "./components/Tips";
 import Results from "./components/Results";
-import FeedbackWidget from "../../components/feedback-widget/FeedbackWidget";
 
 export default function Home(): JSX.Element {
   const [savings, setSavings] = useState(25000);
@@ -234,7 +233,7 @@ export default function Home(): JSX.Element {
           </motion.section>
         )}
       </main>
-      {submitted && <FeedbackWidget></FeedbackWidget>}
+      {submitted}
     </div>
   );
 }

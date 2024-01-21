@@ -18,7 +18,6 @@ import useTable from "./useTable";
 import useChart from "./useChart";
 import { initialFormState } from "./config";
 import { FormState, Period as PeriodType } from "./types";
-import { FeedbackWidget } from "../../components/feedback-widget";
 
 export default function CryptoIndexFund(): JSX.Element {
   const [form, setForm] = useState<FormState>(initialFormState);
@@ -64,7 +63,7 @@ export default function CryptoIndexFund(): JSX.Element {
       <div className="mx-auto mt-10 space-y-6 sm:mt-14 max-w-7xl">
         <Form onCalculate={onCalculate} />
 
-        <div className="pb-10 overflow-hidden rounded-lg md:rounded-2xl bg-gradient-to-b from-gray-900 relative">
+        <div className="relative pb-10 overflow-hidden rounded-lg md:rounded-2xl bg-gradient-to-b from-gray-900">
           <Calculating isLoadingCurrencies={isLoadingCurrencies} />
 
           <div className="relative">
@@ -112,8 +111,6 @@ export default function CryptoIndexFund(): JSX.Element {
 
         <Tips />
       </div>
-
-      <FeedbackWidget />
     </div>
   );
 }

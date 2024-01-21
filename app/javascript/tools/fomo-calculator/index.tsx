@@ -36,7 +36,6 @@ import { ErrorBoundary } from "../../components/ErrorBoundary";
 import Results from "./Results";
 import axios from "axios";
 import { ChartData, getChartData, getForecastedChartData } from "./lib";
-import FeedbackWidget from "../../components/feedback-widget/FeedbackWidget";
 
 const tickers: SelectableOption[] = [
   {
@@ -310,7 +309,7 @@ export default function Home(): JSX.Element {
 
               {submitted && (
                 <motion.div
-                  className="px-2 md:px-10 pt-5 md:pt-10 mt-8 rounded-lg bg-black overflow-hidden"
+                  className="px-2 pt-5 mt-8 overflow-hidden bg-black rounded-lg md:px-10 md:pt-10"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                 >
@@ -323,14 +322,14 @@ export default function Home(): JSX.Element {
                         )}
                       >
                         <div className="flex items-center justify-center h-full transform -translate-y-8">
-                          <p className="font-display font-extrabold text-xl md:text-2xl leading-heading">
+                          <p className="text-xl font-extrabold font-display md:text-2xl leading-heading">
                             Calculating...
                           </p>
                         </div>
                       </div>
                       {errorMessage ? (
-                        <div className="flex h-48 items-center justify-center">
-                          <h2 className="font-extrabold text-xl md:text-2xl leading-heading text-center">
+                        <div className="flex items-center justify-center h-48">
+                          <h2 className="text-xl font-extrabold text-center md:text-2xl leading-heading">
                             {errorMessage}
                           </h2>
                         </div>
@@ -362,7 +361,7 @@ export default function Home(): JSX.Element {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ position: "fixed", opacity: 0 }}
-              className="w-1/2 flex-grow"
+              className="flex-grow w-1/2"
             >
               <div className="flex flex-col gap-4">
                 <TipCard
@@ -404,7 +403,7 @@ export default function Home(): JSX.Element {
             </motion.section>
           )}
         </main>
-        {submitted && <FeedbackWidget />}
+        {submitted}
       </ErrorBoundary>
     </div>
   );
