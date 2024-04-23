@@ -1,14 +1,14 @@
+**🚨 NOTE: This codebase is no longer being maintained. The marketing repo we're actively working on is located at [maybe-finance/marketing](https://github.com/maybe-finance/marketing).**
+
+---
+
 ![home](https://github.com/maybe-finance/marketing/assets/35243/e899e0a0-7d77-495e-b8d1-f189d097f87b)
 
 # Maybe Marketing Site
 
-This is the repo for the former (and hopefully soon to be "present") marketing site for Maybe, an OSS personal finance and wealth management platform.
+This was the repo for the former marketing site for Maybe, an OSS personal finance and wealth management platform.
 
 The marketing site was home to a half dozen financial mini-tools and dozens of in-depth articles on personal finance.
-
-Now that Maybe [is getting a new lease on life](https://github.com/maybe-finance/maybe), we're working on getting the marketing site back up as well!
-
-The README details below are likely somewhat dated, but we're working to get everything cleaned up and functioning as quickly as possible.
 
 ---
 
@@ -110,4 +110,4 @@ The original marketing site had nearly a dozen contributors! Massive thanks to [
 
 ## Copyright & license
 
-The Maybe marketing site is distributed under an [AGPLv3 license](https://github.com/maybe-finance/marketing/blob/main/LICENSE). "Maybe" is a trademark of Maybe Finance, Inc.
+The Maybe marketing site is distributed under an [AGPLv3 license](https://github.com/maybe-finance/marketing/blob/main/LICENSE). "Maybe" and the stacked "M" logo are trademarks of Maybe Finance, Inc.
